@@ -35,3 +35,7 @@ No learner study or measurement of learning outcomes was performed. This iterati
 - Preserved Iteration 02: https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-02/
 - Preserved Iteration 01: https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-01/
 - All saved versions: https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/
+
+## Published verification
+
+The public archive lists both iterations. The fixed Iteration 02 entrance and its college borrowing chapter were opened successfully, showing the revised teaching text and the original italic comment. The saved preview in `iteration-02-preview.jpg` shows that published explanation. Iteration 02 records source commit `9b00c093b14318c75db8c32dcd80ab0f46f1025e` and was first published in snapshot commit `76dd707798b9125fc9bfcf4dcbe3fac61a3425d7`.
