@@ -5,5 +5,12 @@
     "description": "The first published version: five independent courses and 25 connected personal finance chapters.",
     "createdAt": "2026-11-02T19:26:36.094Z",
     "sourceCommit": "72043784bb0e07059b3ee40e7ba30959e4e2b535"
+  },
+  {
+    "id": "iteration-02",
+    "label": "Iteration 02",
+    "description": "Friendlier explanations, everyday examples, and glossary language for all five audiences; the original italic comments are preserved.",
+    "createdAt": "2026-11-02T19:47:05.828Z",
+    "sourceCommit": "9b00c093b14318c75db8c32dcd80ab0f46f1025e"
   }
 ]

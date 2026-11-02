@@ -1,0 +1,184 @@
+{
+  "id": "college",
+  "audience": "College student",
+  "name": "Campus Cashflow",
+  "place": "A very practical elective",
+  "minutes": "4–5",
+  "strap": "A syllabus for your actual life.",
+  "description": "Connect aid, income, budgets, credit, and future goals without a surprise final.",
+  "tone": "Office hours for your bank balance.",
+  "color": "#c5d8ee",
+  "ink": "#243950",
+  "accent": "#f6d681",
+  "income": 1200,
+  "essentials": 1000,
+  "fun": 80,
+  "unit": "month",
+  "goal": 360,
+  "buffer": 100,
+  "contribution": 40,
+  "shock": 250,
+  "principal": 600,
+  "payment": 40,
+  "apr": 24,
+  "invest": 1000,
+  "years": 15,
+  "rate": 5,
+  "fee": 0,
+  "inflation": 0,
+  "topics": [
+    {
+      "title": "Money arriving is not always money earned.",
+      "text": "A deposit has arrived! Before it becomes pizza, check where it came from and what it needs to cover. Work income, support, grants, scholarships, and loans can all bring cash, but loans come with repayment and aid can have conditions. A budget counts the money. Cash flow also checks its arrival date. Rent tends to be deeply interested in the date.",
+      "aside": "Start with $100. Another $600 arrives on day 3 and day 17, and the bills total $1,000. Try a different date for the $650 rent bill, with the landlord’s agreement.",
+      "joke": "The rent deadline has declined your request to “just be chill.”",
+      "prompt": "Change the rent date. The monthly total stays the same.",
+      "term": "AMOUNT AND TIMING BOTH MATTER",
+      "everyday": "Student money often arrives in a few big deposits while bills keep turning up throughout the semester. Check the timing and conditions of aid, work pay, and support, then line them up with the bills. Keep borrowed money in its own mental category: it has a return journey. If dates do not line up, ask the aid office or bill provider about arrangements early. A different due date needs their agreement.",
+      "connection": "Your budget asks, “Is there enough?” Your cash-flow calendar adds, “Will it be here in time?”",
+      "words": [
+        [
+          "Income",
+          "Money you earn or regularly receive as support."
+        ],
+        [
+          "Loan",
+          "Money you borrow and agree to repay under stated terms."
+        ],
+        [
+          "Cash flow",
+          "How much money arrives and leaves, and when it does so."
+        ]
+      ],
+      "assumptions": "Starting cash is $100. Income of $600 arrives on days 3 and 17. Bills are rent $650, utilities $70 on day 5, groceries $150 on day 12, transport $40 on day 20, and books $90 on day 22. Only the agreed rent date changes (day 1, 4, or 18). Every case ends with $300. Transactions are instantaneous on the listed day. No overdraft facility or fee is assumed; a negative balance marks a funding gap."
+    },
+    {
+      "title": "A budget is a draft you revise.",
+      "text": "Give your budget a first draft. Start with realistic take-home income and the things you need to pay for, including occasional ambushes from the textbook list. Then make room for goals and some enjoyment. What counts as a need depends on your life; transport or internet may be essential. If basics cost more than income, look for support and bigger changes to the plan.",
+      "aside": "For this separate monthly example, you have $1,200 and $1,000 of basics. Decide how the remaining $200 divides between flexible spending and a $360 goal.",
+      "joke": "Your budget may need editing. It does not need MLA citations.",
+      "prompt": "Change flexible spending and see the goal timeline.",
+      "term": "PLAN → OBSERVE → ADJUST",
+      "everyday": "List steady bills, changing costs such as groceries, and costs that appear only a few times a term. You can set aside a little each month for a semester bill, but keep an eye on its actual due date. Then compare the plan with what happened and revise it. If basic needs are out of reach, ask about financial aid or campus support. That gap deserves practical help, not a lecture about willpower.",
+      "connection": "Give the goal a line in your budget and a date in your calendar. It needs both to become a plan.",
+      "words": [
+        [
+          "Fixed expense",
+          "A cost that stays fairly steady for a while, such as an agreed rent payment."
+        ],
+        [
+          "Variable expense",
+          "A cost that changes with what you use or need."
+        ],
+        [
+          "Opportunity cost",
+          "The next-best thing you give up when you choose how to use your money."
+        ]
+      ],
+      "assumptions": "Essentials are fixed in this illustration. Flexible spending and saving divide the remaining money. Goal periods = ceiling(goal ÷ saving per period). No interest, price changes, or income changes are modeled."
+    },
+    {
+      "title": "Prepare for ordinary surprises.",
+      "text": "An emergency fund is money you can reach when life adds an unplanned assignment. A repair or a break in income might be that assignment. Start with an amount that fits your situation and review it as your responsibilities change. Insurance can cover certain losses in return for a premium, but deductibles and exclusions mean there may still be a bill for you.",
+      "aside": "Begin with $100 and try adding savings for six months. Then reveal a $250 surprise. If there is a gap, you have found something your plan needs to address.",
+      "joke": "Your laptop has chosen midterms for its dramatic exit.",
+      "prompt": "Change the monthly saving amount. Then reveal the repair.",
+      "term": "LIQUIDITY MEANS BEING ABLE TO USE MONEY WHEN NEEDED",
+      "everyday": "Your savings can help before they reach some grand, official-sounding target. Think about a likely repair, an insurance deductible, or the gap between deposits. A known annual bill gets its own place in the plan; it does not need an emergency entrance every year. Read the insurance terms, too. A policy’s title can sound reassuring while its exclusions have other plans.",
+      "connection": "A cash cushion can stop one surprise bill from elbowing every other goal out of the way.",
+      "words": [
+        [
+          "Liquidity",
+          "How easily you can use your money, or turn an asset into cash when you need it."
+        ],
+        [
+          "Premium",
+          "What you pay for insurance coverage."
+        ],
+        [
+          "Deductible",
+          "An amount you may have to pay before particular insurance coverage starts paying."
+        ]
+      ],
+      "assumptions": "Savings = starting cash + contribution × periods. A surprise is subtracted once when switched on. Savings cannot go below zero; the remaining cost is shown separately. No interest, investment returns, insurance payment, or new borrowing is included."
+    },
+    {
+      "title": "Interest can extend the assignment.",
+      "text": "Borrowing lets you spend today and gives a future budget some homework. Interest and fees add to what you repay. A card’s minimum payment may keep the account current while leaving plenty of debt behind. Many cards let you avoid interest on qualifying purchases by paying the full statement balance on time when a grace period applies. The conditions matter.",
+      "aside": "Here is a fictional $600 card balance at 24% APR, with fixed payments and no new charges or fees. The model works monthly; real cards often calculate interest daily.",
+      "joke": "Unlike an essay, this balance will not finish itself at 11:59 p.m.",
+      "prompt": "Raise the monthly payment. Watch the payoff time change.",
+      "term": "BORROWING IS A FUTURE CASH-FLOW COMMITMENT",
+      "everyday": "Student loans and credit cards live in different rulebooks. Check each product’s rates, fees, protections, and repayment terms; the card illustration here is not a student-loan calculator. Notice how much of a payment covers interest and how much reduces the amount borrowed. If a payment looks unaffordable, contact the lender or servicer about options early. The problem is easier to discuss before the due date becomes yesterday.",
+      "connection": "Repayments have to live in your future cash flow. Invite them into the budget before signing the agreement.",
+      "words": [
+        [
+          "Principal",
+          "The borrowed amount still owing, apart from interest charges."
+        ],
+        [
+          "APR",
+          "An annual percentage rate used to describe borrowing cost."
+        ],
+        [
+          "Minimum payment",
+          "The smallest payment the agreement requires for that period."
+        ],
+        [
+          "Grace period",
+          "A period when qualifying purchases may avoid interest if you meet the card’s conditions."
+        ]
+      ],
+      "assumptions": "Interest = opening balance × APR ÷ 12, then the fixed payment is applied. The last payment may be smaller. No new charges, fees, daily calculation, payment timing variation, or tax effects. The comparison payment is a fictional fixed amount, not a real issuer’s minimum-payment schedule."
+    },
+    {
+      "title": "Match the money to the deadline.",
+      "text": "Give your money a deadline before giving it an investment. Accessible savings suit needs coming up soon. Investments may help with longer goals, but they can lose value. Compounding lets growth build on growth; diversification spreads exposure; fees take a share of the result. Understand the product before buying, especially if someone’s sales pitch has misplaced every mention of risk.",
+      "aside": "Explore a fictional $1,000 growing at a steady 5% a year. The switch adds a 20% drop at the end. Real outcomes can be better or worse; these are illustrations.",
+      "joke": "“Diversify” means more than buying five companies with the same business model.",
+      "prompt": "Explore time and a downside before admiring the curve.",
+      "term": "DEADLINE + RISK + COST → A BETTER FIT",
+      "everyday": "A housing deposit due soon and a retirement goal decades away need different plans. A market drop just before the deposit is due can create a real problem, even if growth over many years is plausible. For a longer goal, check the spread of investments, ongoing fees, and account rules. Remember inflation, too: a larger future balance may buy less than you expect from the number alone.",
+      "connection": "Your income, debts, cushion, and deadlines all get a vote in how much investment risk your plan can handle.",
+      "words": [
+        [
+          "Compounding",
+          "Earlier growth earning more growth as time passes."
+        ],
+        [
+          "Diversification",
+          "Spreading investments to reduce reliance on a small number of holdings."
+        ],
+        [
+          "Inflation",
+          "A rise in prices across the economy that reduces what a dollar can buy."
+        ],
+        [
+          "Fee",
+          "A cost that leaves you with less of the money an investment earns."
+        ]
+      ],
+      "assumptions": "Nominal ending value = principal × (1 + (gross return − annual fee)/100)^years. Purchasing power divides that value by (1 + inflation/100)^years. Subtracting the fee from annual return is a simplified convention. The optional 20% drop is applied once at the end, to both comparison paths. No taxes, contributions, or changing returns. These are scenarios, not promised outcomes."
+    }
+  ],
+  "recap": [
+    "Separate grants, wages, and borrowed cash.",
+    "Check bill dates as well as monthly totals.",
+    "Keep a buffer and understand insurance terms.",
+    "Understand interest, investment risk, and fees."
+  ],
+  "action": [
+    "Put income and bill dates on one calendar.",
+    "Look up a campus financial-support resource.",
+    "Read a borrowing agreement before signing."
+  ],
+  "duration": "10–15 min",
+  "artAlt": "A campus building, a calendar with a rent date, and stacked books.",
+  "nextAudience": "Post-college student",
+  "budgetStep": 10,
+  "saveMax": 200,
+  "saveStep": 10,
+  "minPayment": 15,
+  "maxPayment": 200,
+  "payStep": 5
+}
