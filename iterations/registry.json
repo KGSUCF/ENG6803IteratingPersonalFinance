@@ -12,5 +12,12 @@
     "description": "Friendlier explanations, everyday examples, and glossary language for all five audiences; the original italic comments are preserved.",
     "createdAt": "2026-11-02T19:47:05.828Z",
     "sourceCommit": "9b00c093b14318c75db8c32dcd80ab0f46f1025e"
+  },
+  {
+    "id": "iteration-03",
+    "label": "Iteration 03",
+    "description": "Fixed chart scales, larger labels, and animated growth with play and pause.",
+    "createdAt": "2026-11-02T22:22:08.496Z",
+    "sourceCommit": "a1a3ad312406c0320c8f0b7f95e50d6bca9857f1"
   }
 ]

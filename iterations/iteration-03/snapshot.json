@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "iteration-03",
+  "label": "Iteration 03",
+  "description": "Fixed chart scales, larger labels, and animated growth with play and pause.",
+  "createdAt": "2026-11-02T22:22:08.496Z",
+  "sourceCommit": "a1a3ad312406c0320c8f0b7f95e50d6bca9857f1",
+  "storageNamespace": "money-moves:iteration-03:",
+  "note": "Runtime copied from the source commit. Runtime transformations isolate browser progress and notes for this iteration and route the global archive link to its parent archive page.",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "index.html",
+      "sourceSha256": "b73ac7a30eeeb8ce5aa4f78bd5dfdb8c797819dc706b664ce9caaa3842d2eb44",
+      "sha256": "880a518b535d021c8b1a981538ec5e60212ab1a20ea4040e39a9a45735911ff5"
+    },
+    {
+      "path": "sources.html",
+      "sourceSha256": "bff3bca8e60b5726529e2eda65ee8e4acbefbccc5cc88e2a477d9fd6d907dda9",
+      "sha256": "bff3bca8e60b5726529e2eda65ee8e4acbefbccc5cc88e2a477d9fd6d907dda9"
+    },
+    {
+      "path": "assets/favicon.svg",
+      "sourceSha256": "2651d6b3915eae3ce5bc6cc4184af118bd4c01fecb58a00d6d6604bb8bf12249",
+      "sha256": "2651d6b3915eae3ce5bc6cc4184af118bd4c01fecb58a00d6d6604bb8bf12249"
+    },
+    {
+      "path": "assets/hub.css",
+      "sourceSha256": "ff4d95adf60f8af9e0fbfd17ab016ba35503f55320c50b113a4e0bad61d0ad32",
+      "sha256": "ff4d95adf60f8af9e0fbfd17ab016ba35503f55320c50b113a4e0bad61d0ad32"
+    },
+    {
+      "path": "assets/hub.js",
+      "sourceSha256": "ab00fb6efbe9153fcfedf1513edf9cb5f5dbf4f5ae9a4c60d2409d9657b68dfd",
+      "sha256": "f223cc23a8397d1f0a3c11ddee87310c1165b76182e7df6b9e3e945f6fee3163"
+    },
+    {
+      "path": "assets/money-map.svg",
+      "sourceSha256": "a02c55a7f755591817a1600d91041c1dc629deb2d252b39c2a3e715e2816fc19",
+      "sha256": "a02c55a7f755591817a1600d91041c1dc629deb2d252b39c2a3e715e2816fc19"
+    },
+    {
+      "path": "child/content.json",
+      "sourceSha256": "06089a27489cb46fdc0b3d7fb99b1ed2f5748b2ede9e9afecab94ea311ad2ad8",
+      "sha256": "06089a27489cb46fdc0b3d7fb99b1ed2f5748b2ede9e9afecab94ea311ad2ad8"
+    },
+    {
+      "path": "child/index.html",
+      "sourceSha256": "05e11b1f3f2f0391ae8e5da260578a350e20e015ee25824ffc7af4ffea6f2272",
+      "sha256": "05e11b1f3f2f0391ae8e5da260578a350e20e015ee25824ffc7af4ffea6f2272"
+    },
+    {
+      "path": "child/lesson.js",
+      "sourceSha256": "e882810636c6b3f833e0aaf71b634b8126e4fd0392f4184cba4c5ae6b8203a18",
+      "sha256": "f4375c918cc124ebea2c0f61a80770bb2544fd36435096409c16799023145c1a"
+    },
+    {
+      "path": "child/model.js",
+      "sourceSha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07",
+      "sha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07"
+    },
+    {
+      "path": "child/scene.svg",
+      "sourceSha256": "e2ec03aea93ad1ff1e315f94bc221738c6f1a80062b81d1f625d774dc58bc912",
+      "sha256": "e2ec03aea93ad1ff1e315f94bc221738c6f1a80062b81d1f625d774dc58bc912"
+    },
+    {
+      "path": "child/style.css",
+      "sourceSha256": "201eca086ff73f6bc139528ff422aff72803f36e129963258aa96702c1ddddbb",
+      "sha256": "201eca086ff73f6bc139528ff422aff72803f36e129963258aa96702c1ddddbb"
+    },
+    {
+      "path": "teen/content.json",
+      "sourceSha256": "91046abf28815f65cc85b6704a1c227cdcb8781313b5122676883d232722cb22",
+      "sha256": "91046abf28815f65cc85b6704a1c227cdcb8781313b5122676883d232722cb22"
+    },
+    {
+      "path": "teen/index.html",
+      "sourceSha256": "aeac0d9386914bb035332a82bda2d67e5d19e8b2fd91032e80a4616db1eab803",
+      "sha256": "aeac0d9386914bb035332a82bda2d67e5d19e8b2fd91032e80a4616db1eab803"
+    },
+    {
+      "path": "teen/lesson.js",
+      "sourceSha256": "e882810636c6b3f833e0aaf71b634b8126e4fd0392f4184cba4c5ae6b8203a18",
+      "sha256": "f4375c918cc124ebea2c0f61a80770bb2544fd36435096409c16799023145c1a"
+    },
+    {
+      "path": "teen/model.js",
+      "sourceSha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07",
+      "sha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07"
+    },
+    {
+      "path": "teen/scene.svg",
+      "sourceSha256": "c4c7c7458e3bddbf09ea8dd19ed7767174eb99e176c4f74c80a763e116c20c5d",
+      "sha256": "c4c7c7458e3bddbf09ea8dd19ed7767174eb99e176c4f74c80a763e116c20c5d"
+    },
+    {
+      "path": "teen/style.css",
+      "sourceSha256": "201eca086ff73f6bc139528ff422aff72803f36e129963258aa96702c1ddddbb",
+      "sha256": "201eca086ff73f6bc139528ff422aff72803f36e129963258aa96702c1ddddbb"
+    },
+    {
+      "path": "college/content.json",
+      "sourceSha256": "06ccb3c57079cd011f082d7c13b9f6c9e4d536946b85823336ab886fbc0276e1",
+      "sha256": "06ccb3c57079cd011f082d7c13b9f6c9e4d536946b85823336ab886fbc0276e1"
+    },
+    {
+      "path": "college/index.html",
+      "sourceSha256": "9c7380cba143e7c0a7c4ddf2e71990ff409ea43ebf2913420b77b3efd5e70e93",
+      "sha256": "9c7380cba143e7c0a7c4ddf2e71990ff409ea43ebf2913420b77b3efd5e70e93"
+    },
+    {
+      "path": "college/lesson.js",
+      "sourceSha256": "e882810636c6b3f833e0aaf71b634b8126e4fd0392f4184cba4c5ae6b8203a18",
+      "sha256": "f4375c918cc124ebea2c0f61a80770bb2544fd36435096409c16799023145c1a"
+    },
+    {
+      "path": "college/model.js",
+      "sourceSha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07",
+      "sha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07"
+    },
+    {
+      "path": "college/scene.svg",
+      "sourceSha256": "3ab00f589eae04072e082fdea5a4509051031c5da345c5ad4fbf2aeec7e73fdf",
+      "sha256": "3ab00f589eae04072e082fdea5a4509051031c5da345c5ad4fbf2aeec7e73fdf"
+    },
+    {
+      "path": "college/style.css",
+      "sourceSha256": "201eca086ff73f6bc139528ff422aff72803f36e129963258aa96702c1ddddbb",
+      "sha256": "201eca086ff73f6bc139528ff422aff72803f36e129963258aa96702c1ddddbb"
+    },
+    {
+      "path": "post-college/content.json",
+      "sourceSha256": "e955df6be702d4f08b0f87d7b5633b76892812c8bde02d77be91da922eefe79f",
+      "sha256": "e955df6be702d4f08b0f87d7b5633b76892812c8bde02d77be91da922eefe79f"
+    },
+    {
+      "path": "post-college/index.html",
+      "sourceSha256": "5130be3b9be2c4ff4842d2863766f0f93260ea4d611de5e80991518568c2a137",
+      "sha256": "5130be3b9be2c4ff4842d2863766f0f93260ea4d611de5e80991518568c2a137"
+    },
+    {
+      "path": "post-college/lesson.js",
+      "sourceSha256": "e882810636c6b3f833e0aaf71b634b8126e4fd0392f4184cba4c5ae6b8203a18",
+      "sha256": "f4375c918cc124ebea2c0f61a80770bb2544fd36435096409c16799023145c1a"
+    },
+    {
+      "path": "post-college/model.js",
+      "sourceSha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07",
+      "sha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07"
+    },
+    {
+      "path": "post-college/scene.svg",
+      "sourceSha256": "141b48cab814661e1ebf590ac2f5af65b449a8913d2888a000d1ecfff85ed21e",
+      "sha256": "141b48cab814661e1ebf590ac2f5af65b449a8913d2888a000d1ecfff85ed21e"
+    },
+    {
+      "path": "post-college/style.css",
+      "sourceSha256": "201eca086ff73f6bc139528ff422aff72803f36e129963258aa96702c1ddddbb",
+      "sha256": "201eca086ff73f6bc139528ff422aff72803f36e129963258aa96702c1ddddbb"
+    },
+    {
+      "path": "expert/content.json",
+      "sourceSha256": "c707dfb8501fe8363feb7b8723959ee572c7827f2ac0a47cc74ab64b2cfcc111",
+      "sha256": "c707dfb8501fe8363feb7b8723959ee572c7827f2ac0a47cc74ab64b2cfcc111"
+    },
+    {
+      "path": "expert/index.html",
+      "sourceSha256": "ddae1a454232c85a14adb8f98eb17316195939ab4334d815b90fc185a8047aa5",
+      "sha256": "ddae1a454232c85a14adb8f98eb17316195939ab4334d815b90fc185a8047aa5"
+    },
+    {
+      "path": "expert/lesson.js",
+      "sourceSha256": "e882810636c6b3f833e0aaf71b634b8126e4fd0392f4184cba4c5ae6b8203a18",
+      "sha256": "f4375c918cc124ebea2c0f61a80770bb2544fd36435096409c16799023145c1a"
+    },
+    {
+      "path": "expert/model.js",
+      "sourceSha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07",
+      "sha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07"
+    },
+    {
+      "path": "expert/scene.svg",
+      "sourceSha256": "65b0a769e6b1005d127bbf2326dc4520b7610532cceec832ef27ac224131c97c",
+      "sha256": "65b0a769e6b1005d127bbf2326dc4520b7610532cceec832ef27ac224131c97c"
+    },
+    {
+      "path": "expert/style.css",
+      "sourceSha256": "201eca086ff73f6bc139528ff422aff72803f36e129963258aa96702c1ddddbb",
+      "sha256": "201eca086ff73f6bc139528ff422aff72803f36e129963258aa96702c1ddddbb"
+    }
+  ]
+}
