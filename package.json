@@ -1,0 +1,9 @@
+{
+  "name": "money-moves-personal-finance",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Five independent illustrated introductions to personal finance.",
+  "scripts": {"test": "node --test tests/*.test.mjs"},
+  "engines": {"node": ">=20"}
+}

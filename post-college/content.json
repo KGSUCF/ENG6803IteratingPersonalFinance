@@ -1,0 +1,188 @@
+{
+  "id": "post-college",
+  "audience": "Post-college student",
+  "name": "The Real-Life Money Manual",
+  "place": "Welcome to your financial home base",
+  "minutes": "4–5",
+  "strap": "Some assembly required. You’ve got this.",
+  "description": "Give everyday bills, safety nets, debt, and long-term plans a place to live.",
+  "tone": "The appliance warranty is not a personality test.",
+  "color": "#dfc2ab",
+  "ink": "#354339",
+  "accent": "#d0dca7",
+  "income": 2800,
+  "essentials": 2200,
+  "fun": 200,
+  "unit": "month",
+  "goal": 1200,
+  "buffer": 100,
+  "contribution": 100,
+  "shock": 450,
+  "principal": 1500,
+  "payment": 125,
+  "apr": 24,
+  "invest": 1000,
+  "years": 25,
+  "rate": 5,
+  "fee": 0,
+  "inflation": 2,
+  "topics": [
+    {
+      "title": "Build from the money that actually lands.",
+      "text": "Gross pay is earnings before taxes and other deductions. Take-home pay is what reaches you. A spending plan starts there and includes housing, food, transport, health needs, debt payments, and less frequent bills. Net worth is assets minus debts; it is different from monthly income and available cash.",
+      "aside": "This fictional $2,800 monthly take-home amount is not a salary benchmark. Here, $2,200 covers essentials and required payments.",
+      "joke": "The salary sounded bigger before it met the deductions.",
+      "prompt": "Toggle between the whole amount and the essentials.",
+      "term": "CASH FLOW IS A FLOW; NET WORTH IS A SNAPSHOT",
+      "everyday": "A new salary can come with new responsibilities: health coverage, retirement-plan decisions, rent, commuting, and taxes. Read the pay statement and benefit documents instead of planning from the headline salary. Some annual bills need a monthly reserve. A household can have positive net worth yet very little spendable cash; check both the balance sheet and the coming month’s obligations.",
+      "connection": "Your spending plan should use available cash after deductions, not a headline salary.",
+      "words": [
+        [
+          "Gross pay",
+          "Pay before taxes and other deductions."
+        ],
+        [
+          "Take-home pay",
+          "Cash pay after deductions."
+        ],
+        [
+          "Net worth",
+          "Assets minus debts at a point in time."
+        ]
+      ],
+      "assumptions": "All money amounts and timing are invented for teaching. This is not a survey of prices, income, or tax rates. The flow view is a single example, not a recommended allocation."
+    },
+    {
+      "title": "Your priorities need calendar space.",
+      "text": "A workable budget assigns money to obligations, flexible spending, and goals. Broad percentage rules can be starting points, not requirements: living costs differ. If essentials exceed income, the plan needs structural help. Review the plan when your income, household, or responsibilities change.",
+      "aside": "This model leaves $600 after essentials. Split it between flexible spending and a $1,200 goal. It shows the tradeoff, not an ideal allocation.",
+      "joke": "A spreadsheet cannot negotiate your rent. Annoyingly.",
+      "prompt": "Change flexible spending and observe what happens to the goal.",
+      "term": "PLAN FOR YOUR LIFE, NOT SOMEONE ELSE’S RATIO",
+      "everyday": "Separate obligations from expenses you can change quickly. Include a line for a goal and a line for irregular costs. A shared household may need a conversation about how bills are split. Automation can help with saving and paying bills, but it still needs enough cash at the right time. When housing or care costs overwhelm the plan, cutting a few small treats may not solve the underlying gap.",
+      "connection": "A useful plan supports your priorities while acknowledging the constraints you actually face.",
+      "words": [
+        [
+          "Budget",
+          "A plan connecting income with spending, saving, and obligations."
+        ],
+        [
+          "Opportunity cost",
+          "The next-best use of money you give up."
+        ],
+        [
+          "Reserve",
+          "Money set aside for a cost or future need."
+        ]
+      ],
+      "assumptions": "Essentials are fixed in this illustration. Flexible spending and saving divide the remaining money. Goal periods = ceiling(goal ÷ saving per period). No interest, price changes, or income changes are modeled."
+    },
+    {
+      "title": "Resilience has more than one tool.",
+      "text": "An emergency fund can absorb a cost without new borrowing. Its size depends on your risks, obligations, and support. Insurance transfers some covered risks for a premium, with limits, deductibles, and exclusions. Saving, insurance, and paying down expensive debt each protect you in different ways.",
+      "aside": "Start with $100 and add savings for six months. Then test a $450 repair. This is a cash-cushion illustration, not a complete priority order.",
+      "joke": "An emergency fund is a subscription to fewer unpleasant surprises.",
+      "prompt": "Explore a saving pace, then see what the repair uses.",
+      "term": "RESILIENCE = ACCESSIBLE CASH + A PLAN FOR RISKS",
+      "everyday": "A predictable annual insurance bill belongs in planned spending; an unexpected repair may use emergency savings. Keep the difference clear so the same bill does not surprise you every year. A stable salary, uncertain freelance income, dependents, and access to support can lead to different reserve targets. Required debt payments remain obligations while you build a cushion. Review both your available cash and your actual insurance coverage.",
+      "connection": "Resilience supports the budget: it can prevent one unexpected bill from disrupting every other goal.",
+      "words": [
+        [
+          "Emergency fund",
+          "Accessible savings for unplanned expenses or loss of income."
+        ],
+        [
+          "Premium",
+          "The cost of insurance coverage."
+        ],
+        [
+          "Deductible",
+          "An amount you may pay before specified coverage pays."
+        ],
+        [
+          "Exclusion",
+          "A situation or loss a policy does not cover."
+        ]
+      ],
+      "assumptions": "Savings = starting cash + contribution × periods. A surprise is subtracted once when switched on. Savings cannot go below zero; the remaining cost is shown separately. No interest, investment returns, insurance payment, or new borrowing is included."
+    },
+    {
+      "title": "Debt has a price and a schedule.",
+      "text": "Interest is the price of borrowing; fees can raise the total. After required payments, extra repayment of high-interest debt can reduce future interest, while using all available cash may leave no buffer. Compare costs and preserve essential cash. Check actual terms before deciding.",
+      "aside": "This example is a $1,500 card balance at 24% APR, fixed monthly payments, no fees, and no new charges. It excludes other obligations.",
+      "joke": "Your credit card would love to be in a long-term relationship.",
+      "prompt": "Compare payment amounts, payoff time, and interest cost.",
+      "term": "COST, LIQUIDITY, AND OBLIGATIONS BELONG IN THE SAME PLAN",
+      "everyday": "The highest interest rate is an important cost signal, but the whole plan matters. Making extra repayments while missing rent is not a useful optimization. Loan terms may include variable rates, penalties, or benefits that affect a comparison. Keep track of required payments first. If repayments are becoming unmanageable, a reputable nonprofit credit counselor or the lender may be able to explain options.",
+      "connection": "Extra repayment reduces future borrowing costs; accessible savings preserve options when life changes.",
+      "words": [
+        [
+          "Principal",
+          "The balance borrowed, separate from interest cost."
+        ],
+        [
+          "APR",
+          "An annual percentage rate describing borrowing cost."
+        ],
+        [
+          "Interest",
+          "A charge for using borrowed money."
+        ],
+        [
+          "Liquidity",
+          "Money’s availability when an obligation comes due."
+        ]
+      ],
+      "assumptions": "Interest = opening balance × APR ÷ 12, then the fixed payment is applied. The last payment may be smaller. No new charges, fees, daily calculation, payment timing variation, or tax effects. The comparison payment is a fictional fixed amount, not a real issuer’s minimum-payment schedule."
+    },
+    {
+      "title": "Let the long term be long term.",
+      "text": "Compounding can make earlier growth earn more growth. Investments can fall, so match their risk to your deadline and capacity for loss. Diversification reduces concentration risk; fees reduce returns. Inflation changes purchasing power. Review employer-plan terms, including any match and vesting, rather than assuming all plans work alike.",
+      "aside": "Explore $1,000 at a hypothetical steady 5% annual return and 2% inflation. Purchasing-power values are before tax. Real returns fluctuate.",
+      "joke": "Retirement You has requested a seat at the budget meeting.",
+      "prompt": "Change the years. Compare account dollars and buying power.",
+      "term": "ACCOUNT DOLLARS AND BUYING POWER ARE DIFFERENT",
+      "everyday": "If an employer offers a retirement contribution match, the match formula and vesting rules affect its value to you. Tax treatment and withdrawal restrictions also differ across accounts. Compare diversified investments and ongoing costs, not just recent performance. A promise of high returns with no risk is a red flag. Money for a near-term move or emergency should not depend on a smooth market path.",
+      "connection": "Long-term investing sits on top of the everyday cash-flow and resilience decisions, not apart from them.",
+      "words": [
+        [
+          "Compounding",
+          "Growth building on earlier growth."
+        ],
+        [
+          "Purchasing power",
+          "The goods and services a sum of money can buy."
+        ],
+        [
+          "Vesting",
+          "Rules determining when certain employer contributions become yours."
+        ],
+        [
+          "Diversification",
+          "Spreading investment exposure; it does not guarantee against loss."
+        ]
+      ],
+      "assumptions": "Nominal ending value = principal × (1 + (gross return − annual fee)/100)^years. Purchasing power divides that value by (1 + inflation/100)^years. Subtracting the fee from annual return is a simplified convention. The optional 20% drop is applied once at the end, to both comparison paths. No taxes, contributions, or changing returns. These are scenarios, not promised outcomes."
+    }
+  ],
+  "recap": [
+    "Plan with take-home pay and irregular bills.",
+    "Adjust the budget to your circumstances.",
+    "Balance debt costs with resilience.",
+    "Understand compounding, inflation, fees, and risk."
+  ],
+  "action": [
+    "Review one bill, due date, or benefit.",
+    "Choose a realistic starter buffer.",
+    "Read a plan’s fees and matching terms."
+  ],
+  "duration": "10–15 min",
+  "artAlt": "An apartment with a couch, a plant, a checklist, and a key.",
+  "nextAudience": "Expert",
+  "budgetStep": 25,
+  "saveMax": 600,
+  "saveStep": 25,
+  "minPayment": 50,
+  "maxPayment": 500,
+  "payStep": 25
+}
