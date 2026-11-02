@@ -51,7 +51,7 @@
     {
       "path": "child/index.html",
       "sourceSha256": "05e11b1f3f2f0391ae8e5da260578a350e20e015ee25824ffc7af4ffea6f2272",
-      "sha256": "05e11b1f3f2f0391ae8e5da260578a350e20e015ee25824ffc7af4ffea6f2272"
+      "sha256": "ac8f301d4e26050d967cc231f390586513eda302a2ffa6216876590223585385"
     },
     {
       "path": "child/lesson.js",
@@ -81,7 +81,7 @@
     {
       "path": "teen/index.html",
       "sourceSha256": "aeac0d9386914bb035332a82bda2d67e5d19e8b2fd91032e80a4616db1eab803",
-      "sha256": "aeac0d9386914bb035332a82bda2d67e5d19e8b2fd91032e80a4616db1eab803"
+      "sha256": "65f543c375c95b6802cd3667fa4f3177fc03e85bbc6b32ec22c3b1d07a99e302"
     },
     {
       "path": "teen/lesson.js",
@@ -111,7 +111,7 @@
     {
       "path": "college/index.html",
       "sourceSha256": "9c7380cba143e7c0a7c4ddf2e71990ff409ea43ebf2913420b77b3efd5e70e93",
-      "sha256": "9c7380cba143e7c0a7c4ddf2e71990ff409ea43ebf2913420b77b3efd5e70e93"
+      "sha256": "b86aee265de2f77d989689fc3c5ebbd33c22a6767b00182421446a80b263a2ce"
     },
     {
       "path": "college/lesson.js",
@@ -141,7 +141,7 @@
     {
       "path": "post-college/index.html",
       "sourceSha256": "5130be3b9be2c4ff4842d2863766f0f93260ea4d611de5e80991518568c2a137",
-      "sha256": "5130be3b9be2c4ff4842d2863766f0f93260ea4d611de5e80991518568c2a137"
+      "sha256": "5ccdaa650bf8e226cfdb6d6bd08ce2206337b8e6d1add6234e994530ab4a4fa3"
     },
     {
       "path": "post-college/lesson.js",
@@ -171,7 +171,7 @@
     {
       "path": "expert/index.html",
       "sourceSha256": "ddae1a454232c85a14adb8f98eb17316195939ab4334d815b90fc185a8047aa5",
-      "sha256": "ddae1a454232c85a14adb8f98eb17316195939ab4334d815b90fc185a8047aa5"
+      "sha256": "3b643eecc009981d40276793e31d225c659382aeb5e1dd4fe2f36c1b45bfe607"
     },
     {
       "path": "expert/lesson.js",
