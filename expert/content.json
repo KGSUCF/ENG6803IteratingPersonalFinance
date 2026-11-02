@@ -29,145 +29,145 @@
   "topics": [
     {
       "title": "Separate flows, stocks, and constraints.",
-      "text": "Income and spending are flows over time. Net worth is a stock of assets minus liabilities. Neither alone measures liquidity: a valuable asset may not meet tomorrow’s bill without cost or delay. Start a financial decision with cash needs, obligations, time horizon, and uncertainty, not an isolated return.",
-      "aside": "This fictional household has $6,000 monthly take-home cash and $4,200 in essential outflows. Its net worth and job stability are deliberately unspecified.",
+      "text": "Before admiring the balance sheet, ask what can pay a bill on Tuesday. Income and spending are flows over time. Net worth is a stock: assets minus liabilities at a point in time. Liquidity asks how readily resources can meet a cash demand without unacceptable cost or delay. Start with obligations, deadlines, and uncertainty, then consider the return. Tuesday rarely accepts a promising long-term projection.",
+      "aside": "This fictional household has $6,000 of monthly take-home cash and $4,200 of essential outflows. We have left net worth and job stability unspecified. Useful missing facts deserve to be noticed.",
       "joke": "Your house has equity. The grocery checkout prefers something more portable.",
       "prompt": "Inspect the cash flow. Notice what the illustration cannot tell you.",
       "term": "A STRONG BALANCE SHEET CAN STILL HAVE A TIMING PROBLEM",
-      "everyday": "A household with substantial home equity and volatile self-employment income may face a near-term liquidity gap. Conversely, a modest balance sheet can support a stable plan if liabilities and cash availability are well aligned. Separate realized cash income from paper gains, restricted assets, and new borrowing. Taxes and benefit deductions matter to spendable cash. A useful model identifies which obligations are certain, which resources are contingent, and which dates cannot move.",
-      "connection": "Before optimizing a return, specify the cash flow, stock of wealth, and binding constraint.",
+      "everyday": "A household can have substantial home equity and a very awkward gap between bills and self-employment receipts. A smaller balance sheet may support a steadier plan when cash and liabilities line up. Separate spendable income from paper gains, restricted assets, and fresh borrowing. Account for deductions, too. Then identify which bills are certain, which resources are conditional, and which dates will refuse to move. Those distinctions earn their space in the model.",
+      "connection": "Name the cash flow, wealth, and binding constraint before asking the model to find an optimum.",
       "words": [
         [
           "Flow",
-          "An amount measured over a period, such as monthly income."
+          "An amount measured over time, such as a month’s income."
         ],
         [
           "Stock",
-          "An amount at a point in time, such as net worth."
+          "An amount at a particular time, such as today’s net worth."
         ],
         [
           "Liquidity",
-          "The ability to meet cash demands without unacceptable delay or cost."
+          "The ability to meet a cash demand without an unacceptable wait or cost."
         ],
         [
           "Constraint",
-          "A condition limiting feasible choices."
+          "Something that limits the choices the plan can actually make."
         ]
       ],
       "assumptions": "All money amounts and timing are invented for teaching. This is not a survey of prices, income, or tax rates. The flow view is a single example, not a recommended allocation."
     },
     {
       "title": "Allocate marginal dollars deliberately.",
-      "text": "A budget is a resource-allocation model, not a moral ranking of purchases. The opportunity cost of a choice is the next-best alternative forgone. Fixed costs, taxes, care obligations, and volatile income constrain feasible choices. A monthly surplus is not automatically an investable surplus if near-term liabilities are omitted.",
-      "aside": "After modeled essentials, $1,800 remains. Move flexible spending and observe the time to a $12,000 goal. No growth, income volatility, or taxes are added.",
+      "text": "Ask each extra dollar what its next-best job would be. That alternative is its opportunity cost. A budget helps compare uses of money within real constraints: fixed costs, taxes, care obligations, and income uncertainty. Before calling a surplus investable, check which upcoming liabilities have been left off the guest list. An annual bill remains real even when the monthly spreadsheet has forgotten its name.",
+      "aside": "The modeled essentials leave $1,800. Adjust flexible spending and watch the time to a $12,000 goal. Growth, income volatility, and additional taxes are outside this small experiment.",
       "joke": "“All else equal” has once again failed to attend the meeting.",
       "prompt": "Explore the allocation, then ask which missing fact would matter.",
       "term": "OPTIMIZE WITHIN CONSTRAINTS; AUDIT THE CONSTRAINTS",
-      "everyday": "A spending plan can be evaluated by feasibility, resilience, and alignment with stated goals. Marginal spending choices should be compared with their next-best alternatives, while distinguishing fixed commitments from reversible decisions. A hypothetical percentage allocation says little without household context. Stress tests can expose a plan that works only under full employment, a single price path, or an assumed ability to defer bills. Positive surplus should be reconciled with irregular liabilities.",
-      "connection": "Opportunity cost connects consumption, debt repayment, reserves, and investing in the same framework.",
+      "everyday": "A useful spending plan has to work, withstand some trouble, and support the goals the household actually has. Compare the next dollar’s possible uses and distinguish commitments from choices you can reverse. Percentage rules need context. Stress a plan that assumes uninterrupted income, one price path, or endlessly flexible due dates. Then reconcile the surplus with irregular bills. Elegant allocation is more useful after the missing obligations have been invited back in.",
+      "connection": "Spending, debt repayment, reserves, and investing are all possible jobs for a dollar. Opportunity cost helps you compare them.",
       "words": [
         [
           "Marginal allocation",
-          "The use of the next available dollar or unit of resources."
+          "Deciding what to do with the next available dollar or unit of resources."
         ],
         [
           "Opportunity cost",
-          "The next-best alternative forgone by a choice."
+          "The next-best alternative you give up by choosing."
         ],
         [
           "Feasibility",
-          "Whether a plan can satisfy its actual constraints."
+          "Whether the plan can work within the constraints it actually faces."
         ],
         [
           "Irregular liability",
-          "An obligation that does not arrive on a regular monthly schedule."
+          "An obligation that arrives less neatly than a regular monthly bill."
         ]
       ],
       "assumptions": "Essentials are fixed in this illustration. Flexible spending and saving divide the remaining money. Goal periods = ceiling(goal ÷ saving per period). No interest, price changes, or income changes are modeled."
     },
     {
       "title": "Liquidity is an option with a cost.",
-      "text": "Accessible reserves can reduce forced borrowing or asset sales. Their opportunity cost depends on alternatives, but so does their value under a shock. Insurance can transfer specified losses; it leaves deductibles, exclusions, and counterparty or coverage considerations. Evaluate resilience across income, assets, obligations, and available support.",
-      "aside": "Start with $1,000 and add a monthly contribution for six months. Test a $2,500 shock. This stress case has no assigned probability and excludes insurance recoveries.",
+      "text": "Accessible cash can look unambitious until it prevents a forced loan or asset sale. Holding it has an opportunity cost, but having it available can matter greatly in a shock. Insurance transfers specified losses, with deductibles, exclusions, and questions about coverage and payment. Look across income, assets, obligations, and available support. The household needs a plan that can function when several things become inconvenient at once.",
+      "aside": "Begin with $1,000, add a monthly contribution for six months, and test a $2,500 shock. The scenario has no assigned probability and includes no insurance recovery.",
       "joke": "An illiquid asset is excellent at saying, “I’m worth a lot, technically.”",
       "prompt": "Change contributions. Observe the uncovered cost, not just the balance.",
       "term": "STRESS A PLAN AGAINST AN OBLIGATION",
-      "everyday": "A reserve held in accessible cash may earn less than a risky asset while still improving the household plan. It can preserve choice during job loss or a market decline. Correlated shocks matter: income and asset values can deteriorate together. Insurance coverage is contractual, not a general promise to restore every loss. Identify deductibles, exclusions, limits, and the timing of reimbursement before treating coverage as immediately available cash.",
-      "connection": "A resilience model asks whether the obligation can be met under stress, not only whether average wealth rises.",
+      "everyday": "Cash reserves may earn less than a risky alternative while still helping the overall plan. They preserve options during job loss or a market decline, especially when income and asset values weaken together. Read insurance as a contract for specified coverage. Check limits, exclusions, deductibles, the provider’s ability to pay, and reimbursement timing before counting an insurance payment as cash on hand. “Covered eventually” and “payable today” can be an awkward distance apart.",
+      "connection": "Test whether the bill can be paid under stress, as well as whether average wealth increases. Both questions deserve an answer.",
       "words": [
         [
-          "Liquidity premium",
-          "The value associated with being able to access money promptly."
+          "Value of liquidity",
+          "The usefulness of having money ready when a cash need appears."
         ],
         [
           "Correlated risks",
-          "Risks that may worsen together."
+          "Risks that can get worse together, just when you would prefer some variety."
         ],
         [
           "Risk transfer",
-          "Shifting specified losses under an agreement, such as insurance."
+          "An agreement that shifts specified losses, such as insurance coverage."
         ],
         [
           "Stress test",
-          "An examination of a plan under a defined adverse scenario."
+          "Trying a defined adverse scenario to see whether the plan still works."
         ]
       ],
       "assumptions": "Savings = starting cash + contribution × periods. A surprise is subtracted once when switched on. Savings cannot go below zero; the remaining cost is shown separately. No interest, investment returns, insurance payment, or new borrowing is included."
     },
     {
       "title": "Debt repayment changes the opportunity set.",
-      "text": "Interest avoided by repaying contractual debt is more predictable than a risky investment return, but liquidity, taxes, penalties, and flexibility can alter the comparison. APR alone may not capture every product cost. Model repayment using actual terms, and examine what happens if income falls before optimizing an expected return.",
-      "aside": "The example uses $10,000 at 9% APR with fixed monthly repayments. Interest is APR ÷ 12 on the opening monthly balance, then payment. Taxes, fees, and new borrowing are excluded.",
+      "text": "Debt repayment can avoid contractual interest; a risky investment offers a less certain result. That is a useful starting comparison, with liquidity, taxes, penalties, and flexibility still at the table. APR may not include every relevant product cost. Use the actual terms, and ask what happens if income falls. An expected return can wait while you check whether the payment schedule survives contact with real life.",
+      "aside": "Try fixed payments on $10,000 at 9% APR. Each month, the model charges the opening balance × APR ÷ 12, then applies the payment. Taxes, fees, and new borrowing are excluded.",
       "joke": "The expected return has a beautiful résumé. The debt payment has a due date.",
       "prompt": "Compare payment speeds without treating this model as a recommendation.",
       "term": "COMPARE AFTER-COST OUTCOMES AND LIQUIDITY",
-      "everyday": "A contractual borrowing rate and a probabilistic investment return are not interchangeable inputs. A comparison may also depend on deductibility, prepayment terms, rate resets, and the value of keeping access to cash. Those features are excluded here, so the model isolates repayment arithmetic. If payments do not cover interest, the starting balance does not decline. For variable-rate or daily-interest products, use the actual contract and payment dates rather than this monthly approximation.",
-      "connection": "Debt repayment, liquidity, and investment risk should be compared on a consistent after-cost basis.",
+      "everyday": "A stated borrowing rate and a probability-weighted investment return need careful comparison. Deductibility, prepayment terms, rate resets, and accessible cash can all affect the decision. This model leaves those features aside so you can inspect repayment arithmetic. If a payment cannot cover interest, the starting balance does not decline. For products with daily interest or changing rates, bring the actual contract and payment dates back into the calculation.",
+      "connection": "Put debt costs, liquidity, and investment risk on a consistent after-cost footing before asking which choice looks best.",
       "words": [
         [
           "Amortization",
-          "The reduction of a debt through scheduled payments."
+          "Paying down a debt through scheduled payments."
         ],
         [
           "Principal",
-          "The outstanding borrowed balance."
+          "The borrowed balance still outstanding."
         ],
         [
           "APR",
-          "An annualized percentage measure of borrowing cost; product conventions differ."
+          "An annualized percentage measure of borrowing cost; check the conventions for the product."
         ],
         [
           "Negative amortization",
-          "A situation in which unpaid interest can increase the debt balance."
+          "When unpaid interest can be added to the balance, leaving more debt to repay."
         ]
       ],
       "assumptions": "Interest = opening balance × APR ÷ 12, then the fixed payment is applied. The last payment may be smaller. No new charges, fees, daily calculation, payment timing variation, or tax effects. The comparison payment is a fictional fixed amount, not a real issuer’s minimum-payment schedule."
     },
     {
       "title": "Audit nominal growth, fees, and inflation.",
-      "text": "Compounding amplifies both growth and ongoing costs. Nominal returns describe account dollars; inflation-adjusted values describe purchasing power. Diversification can reduce concentration risk but cannot remove market loss. A smooth expected path is not a distribution of outcomes, and a positive expectation does not guarantee meeting a liability.",
-      "aside": "Compare a selected annual fee with a hypothetical 0.1% fee, holding everything else equal. Returns, fees, and inflation are constant assumptions. Values are before tax.",
+      "text": "Compounding is patient, and ongoing costs are happy to be patient with it. Nominal values count account dollars. Inflation-adjusted values ask what those dollars can buy. Diversification can reduce concentration risk while leaving market risk. Keep asking what the smooth curve leaves out: a single expected path cannot show the full range of outcomes or promise that a future bill will be covered.",
+      "aside": "Compare your selected annual fee with a fictional 0.1% fee under the same assumptions. Returns, fees, and inflation stay constant here. All values are before tax.",
       "joke": "Decimals: tiny on the fee sheet, surprisingly ambitious over twenty years.",
       "prompt": "Move fees and inflation. Then stress the ending value with a 20% fall.",
       "term": "THE OUTPUT IS ONLY AS USEFUL AS THE ASSUMPTIONS",
-      "everyday": "At a fixed gross return, a larger ongoing fee leaves less money compounding. Inflation then translates nominal dollars into purchasing-power terms; taxes would require another layer. These are sensitivity calculations, not an investment forecast. For example, an invented one-period investment with an 80% chance of gaining 15% and a 20% chance of losing 40% has a 4% expected return. It still has a 20% chance of losing 40%. A positive average does not secure a bill due at the end of that period.",
-      "connection": "Judge a model by the decision it supports, the downside it exposes, and the assumptions it leaves outside the frame.",
+      "everyday": "Hold gross return constant and a higher ongoing fee leaves less money compounding. Adjust for inflation to translate the balance into buying power; taxes need another layer. Now consider an invented one-period investment: an 80% chance of gaining 15% and a 20% chance of losing 40%. Its expected return is 4%, but the 20% chance of that 40% loss has not politely disappeared. Averages are useful. They do not pay a bill on your behalf.",
+      "connection": "Ask what decision the model helps you make, what downside it reveals, and which assumptions need another look.",
       "words": [
         [
           "Nominal value",
-          "A value expressed in account dollars without an inflation adjustment."
+          "The balance in account dollars, before adjusting for inflation."
         ],
         [
           "Purchasing power",
-          "What the money can buy after accounting for prices."
+          "What the money can buy at the relevant price level."
         ],
         [
           "Expected return",
-          "A probability-weighted average across modeled possible returns."
+          "The average return when each possible outcome is weighted by its modeled probability."
         ],
         [
           "Sensitivity analysis",
-          "Changing assumptions to see how the output responds."
+          "Changing assumptions to see which ones move the answer."
         ]
       ],
       "assumptions": "Nominal ending value = principal × (1 + (gross return − annual fee)/100)^years. Purchasing power divides that value by (1 + inflation/100)^years. Subtracting the fee from annual return is a simplified convention. The optional 20% drop is applied once at the end, to both comparison paths. No taxes, contributions, or changing returns. These are scenarios, not promised outcomes."

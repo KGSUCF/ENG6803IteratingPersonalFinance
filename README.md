@@ -2,7 +2,7 @@
 
 Five independently editable, illustrated introductions to personal finance, created for Karen Strouse’s **ENG6803IteratingPersonalFinance** assignment.
 
-The first iteration teaches connected concepts through explanations, everyday examples, interactive illustrations, chapter glossaries, and a final recap. It is an introduction rather than a comprehensive curriculum or a personalized financial plan.
+Money Moves teaches connected concepts through explanations, everyday examples, interactive illustrations, chapter glossaries, and a final recap. The latest iteration makes the teaching voice warmer and more conversational for each audience, retaining the original italic comments. It is an introduction rather than a comprehensive curriculum or a personalized financial plan.
 
 ## Open the project
 
@@ -15,6 +15,7 @@ The first iteration teaches connected concepts through explanations, everyday ex
 - **Latest working version:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/
 - **All saved versions:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/
 - **Fixed Iteration 01:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-01/
+- **Fixed Iteration 02:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-02/
 
 Each saved iteration has its own complete runtime files and browser-storage namespace. Future edits to the root app do not change those files or overwrite the saved version’s progress. Use a numbered iteration URL when citing the assignment. `AGENTS.md` records the rule that previously saved iterations must stay unchanged; `npm test` checks their recorded file hashes.
 
@@ -74,7 +75,7 @@ Each course uses a separate `money-moves:v1:<folder>` local-storage key. Stored 
 
 ## Assignment record
 
-`docs/iteration-01.md` records the delivered baseline, requirements, and checks. Proposed improvements are intentionally left to Karen; no AI-generated improvement list or user-testing results have been added.
+`docs/iteration-01.md` records the delivered baseline, requirements, and checks. `docs/iteration-02.md` records the requested friendlier teaching voice and its verification. Proposed improvements are intentionally left to Karen; no AI-generated improvement list or user-testing results have been added.
 
 ## Published first iteration
 
