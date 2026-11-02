@@ -1,0 +1,177 @@
+{
+  "id": "child",
+  "audience": "Child",
+  "name": "The Pocket-Money Club",
+  "place": "A clubhouse for curious minds",
+  "minutes": "4",
+  "strap": "Small coins. Big ideas.",
+  "description": "Meet money, make a plan, and give your future self a little high-five.",
+  "tone": "The piggy bank has called this meeting to order.",
+  "color": "#b9a5ed",
+  "ink": "#302750",
+  "accent": "#f8cf58",
+  "income": 12,
+  "essentials": 6,
+  "fun": 2,
+  "unit": "week",
+  "goal": 12,
+  "buffer": 2,
+  "contribution": 2,
+  "shock": 5,
+  "principal": 6,
+  "payment": 3,
+  "apr": 0,
+  "flatTotal": 7,
+  "invest": 100,
+  "years": 3,
+  "rate": 5,
+  "fee": 0,
+  "inflation": 0,
+  "topics": [
+    {
+      "title": "Money has a job.",
+      "text": "Income is money you get, perhaps from a gift or a small job. Spending is money you use. Saving means keeping some for later. Money is limited: the same dollar cannot buy two things at once.",
+      "aside": "People have different amounts of money. That does not make anyone better or worse.",
+      "joke": "A dollar is talented. Being in two places at once is not one of its talents.",
+      "prompt": "Peek inside a pretend $12 week.",
+      "term": "INCOME → SPENDING + SAVING",
+      "everyday": "Imagine you get $12 for helping with a small job. You might use some for lunch, keep some for a kite, and enjoy some now. Saving is still your money. It is waiting for a different job. You can make a plan before you spend.",
+      "connection": "Money coming in is the starting point. The next chapter helps you choose its jobs.",
+      "words": [
+        [
+          "Income",
+          "Money you get."
+        ],
+        [
+          "Expense",
+          "Money you spend."
+        ],
+        [
+          "Saving",
+          "Keeping money to use later."
+        ]
+      ],
+      "assumptions": "All money amounts and timing are invented for teaching. This is not a survey of prices, income, or tax rates. The flow view is a single example, not a recommended allocation."
+    },
+    {
+      "title": "Make room for now. And later.",
+      "text": "A budget is a plan for your money. A need helps you stay safe and well. A want is something nice to have. Needs can change: a bus ride might be how someone gets home. Choosing one thing means giving up another. That is a tradeoff.",
+      "aside": "In this pretend week, $6 is already needed for a bus ride and lunch. Split the other $6 between fun and saving.",
+      "joke": "Future You would like a kite. Present You has spotted stickers.",
+      "prompt": "Move the slider. Watch both choices change.",
+      "term": "A BUDGET IS A PLAN",
+      "everyday": "You have $6 left after lunch and the bus ride. If you spend $2 on stickers, $4 can wait for the kite. If you spend all $6 now, none of this week’s money goes to the kite. Neither choice makes you a good or bad person. It changes what happens next.",
+      "connection": "A goal gives saving a reason. Your budget helps you make room for that reason.",
+      "words": [
+        [
+          "Budget",
+          "A plan for money."
+        ],
+        [
+          "Need",
+          "Something important for staying safe and well."
+        ],
+        [
+          "Want",
+          "Something nice to have."
+        ],
+        [
+          "Tradeoff",
+          "What you give up to get something else."
+        ]
+      ],
+      "assumptions": "Essentials are fixed in this illustration. Flexible spending and saving divide the remaining money. Goal periods = ceiling(goal ÷ saving per period). No interest, price changes, or income changes are modeled."
+    },
+    {
+      "title": "Save a little breathing room.",
+      "text": "You can save for a goal, like a kite, or for a surprise cost. Keeping money for surprises is called an emergency fund. Saving a little at a time can add up. If you cannot cover something you need, ask a trusted adult for help.",
+      "aside": "This jar starts with $2. Add the same amount each week. The surprise button shows what a $5 repair would do.",
+      "joke": "The jar is not magic. It is just very good at waiting.",
+      "prompt": "Choose a weekly amount. Then try a surprise.",
+      "term": "SAVE FOR GOALS AND SURPRISES",
+      "everyday": "A goal is something you know you want. A surprise is something you did not plan to buy. You might keep separate jars for each. If a necessary repair uses the surprise money, the money did its job! A trusted adult can help you decide where to keep savings safe.",
+      "connection": "Saving means making a choice today so you have more choices later.",
+      "words": [
+        [
+          "Goal",
+          "Something you want to work toward."
+        ],
+        [
+          "Emergency fund",
+          "Money kept for surprise needs."
+        ]
+      ],
+      "assumptions": "Savings = starting cash + contribution × periods. A surprise is subtracted once when switched on. Savings cannot go below zero; the remaining cost is shown separately. No interest, investment returns, insurance payment, or new borrowing is included."
+    },
+    {
+      "title": "Borrowed money comes back around.",
+      "text": "Borrowing means using money now and agreeing to pay it back. The amount you borrow is the principal. Sometimes you pay extra for borrowing. That extra may be interest or a fee. Before agreeing, ask: How much will I pay back altogether?",
+      "aside": "A pretend loan gives you $6 today. You must repay $7 altogether: the $6 borrowed plus $1 borrowing cost.",
+      "joke": "Borrowing is not a money-cloning machine. Sadly, neither is the toaster.",
+      "prompt": "See the difference between money received and money repaid.",
+      "term": "BORROWING HAS A PRICE",
+      "everyday": "If you borrow a toy, you return the toy. When you borrow money, you return the amount you agreed to pay. Some loans cost extra and some do not. Look at the agreement, ask questions, and get help from a trusted adult. Never promise to repay money you do not understand.",
+      "connection": "A repayment uses money from a later budget. Borrowing changes both now and later.",
+      "words": [
+        [
+          "Borrow",
+          "Use money now and agree to repay it."
+        ],
+        [
+          "Principal",
+          "The amount you borrow."
+        ],
+        [
+          "Interest",
+          "Money paid for using money."
+        ]
+      ],
+      "assumptions": "A fictional fixed-total loan: $6 borrowed and $7 repaid. Doubling the example doubles both amounts. No APR, payment timing, or compounding is modeled here. Real agreements differ."
+    },
+    {
+      "title": "Money can grow. It can shrink, too.",
+      "text": "Interest is extra money paid for using money. Some savings earn it. Investing means putting money into something, such as a business, hoping it will grow. An investment can lose money. Keep money you need soon handy, and ask a trusted adult before making money choices online.",
+      "aside": "This pretend $100 grows 5% each year. Interest on earlier growth is called compounding. Real investments do not grow in a smooth line.",
+      "joke": "A money tree would be convenient. This is a model, not a gardening tip.",
+      "prompt": "Change the years. Then see a pretend market drop.",
+      "term": "GROWTH TAKES TIME; RISK IS REAL",
+      "everyday": "Saving money for next week is different from investing for many years. An investment is not a promise that you will get richer. A business can do well or badly. Be careful with messages that promise easy money or ask for passwords. Tell a trusted adult if something feels strange.",
+      "connection": "The same questions help every time: What is it for? When will I need it? What could change?",
+      "words": [
+        [
+          "Investing",
+          "Putting money into something that might grow but might lose value."
+        ],
+        [
+          "Risk",
+          "The chance that things turn out differently than you hope."
+        ],
+        [
+          "Compounding",
+          "Growth earning more growth over time."
+        ]
+      ],
+      "assumptions": "Nominal ending value = principal × (1 + (gross return − annual fee)/100)^years. Purchasing power divides that value by (1 + inflation/100)^years. Subtracting the fee from annual return is a simplified convention. The optional 20% drop is applied once at the end, to both comparison paths. No taxes, contributions, or changing returns. These are scenarios, not promised outcomes."
+    }
+  ],
+  "recap": [
+    "Know what comes in and what goes out.",
+    "Plan for needs, fun, and later.",
+    "Ask what borrowing costs in total.",
+    "Growing money takes time and can involve risk."
+  ],
+  "action": [
+    "Name something I need and something I want.",
+    "Choose a small saving goal.",
+    "Ask a trusted adult about a money question."
+  ],
+  "duration": "8–12 min",
+  "artAlt": "A clubhouse, a kite, and a piggy bank catching a coin.",
+  "nextAudience": "Teen",
+  "budgetStep": 1,
+  "saveMax": 6,
+  "saveStep": 1,
+  "minPayment": 1,
+  "maxPayment": 10,
+  "payStep": 1
+}

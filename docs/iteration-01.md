@@ -47,3 +47,7 @@ Reserved for Karen’s own observations and chosen changes after reviewing the f
 - First application commit: `e7653125ef49520c50eb917f15f241d0f12f561e`.
 - GitHub’s Pages settings confirmed the site was live; the public entrance and child course were opened successfully, including the loaded course JSON and model.
 - `iteration-01-preview.jpg` captures the published course entrance.
+
+## Preserved assignment URL
+
+Use https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-01/ to cite this first iteration. The original root address remains the latest working tool. The archived version copies all 37 runtime files from source commit `72043784bb0e07059b3ee40e7ba30959e4e2b535`; browser-storage keys are scoped to the iteration so that later versions have independent notes and progress. Its teaching content, styling, and illustrations are unchanged. The snapshot manifest records the source commit and file checksums.

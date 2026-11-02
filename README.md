@@ -10,6 +10,16 @@ The first iteration teaches connected concepts through explanations, everyday ex
 - Open `index.html` on a web server to choose one course or start the serial five-course tour.
 - Estimated time: 8–12 minutes for the child course; 10–15 minutes for each other course. These are editorial estimates; no learner timing study has been performed.
 
+## Preserved iterations
+
+- **Latest working version:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/
+- **All saved versions:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/
+- **Fixed Iteration 01:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-01/
+
+Each saved iteration has its own complete runtime files and browser-storage namespace. Future edits to the root app do not change those files or overwrite the saved version’s progress. Use a numbered iteration URL when citing the assignment. `AGENTS.md` records the rule that previously saved iterations must stay unchanged; `npm test` checks their recorded file hashes.
+
+The snapshot command creates a new folder and refuses an existing iteration number. See [the version-preservation workflow](docs/iterations.md). This is a publication and record-keeping change; the learning content of Iteration 01 is preserved.
+
 ## The five independent folders
 
 | Folder | Audience | Learning environment |

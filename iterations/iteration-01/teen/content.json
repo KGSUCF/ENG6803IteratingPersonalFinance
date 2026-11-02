@@ -1,0 +1,180 @@
+{
+  "id": "teen",
+  "audience": "Teen",
+  "name": "The Money Group Chat",
+  "place": "Your feed. Your plans. Your money.",
+  "minutes": "4–5",
+  "strap": "Your money needs a group chat.",
+  "description": "Get the basics of pay, plans, saving, credit, and suspiciously perfect promises.",
+  "tone": "“Only $9 a month” has entered the chat.",
+  "color": "#d9c5fb",
+  "ink": "#302145",
+  "accent": "#cde66e",
+  "income": 90,
+  "essentials": 35,
+  "fun": 24,
+  "unit": "month",
+  "goal": 120,
+  "buffer": 20,
+  "contribution": 10,
+  "shock": 60,
+  "principal": 120,
+  "payment": 15,
+  "apr": 24,
+  "invest": 500,
+  "years": 5,
+  "rate": 5,
+  "fee": 0,
+  "inflation": 0,
+  "topics": [
+    {
+      "title": "Your paycheck is not your whole story.",
+      "text": "Income can come from work, gifts, or other support. Gross pay is earnings before deductions. Take-home pay is what arrives after deductions, which may include taxes. Expenses are what goes out. Track both: an impressive income can still disappear into impressive spending.",
+      "aside": "This fictional month has $90 available after any deductions. The amounts are examples, not typical wages or tax rates.",
+      "joke": "Your bank balance does not accept “but I had a really good vibe.”",
+      "prompt": "Switch views to see where $90 can go.",
+      "term": "MONEY IN − MONEY OUT = ROOM TO PLAN",
+      "everyday": "Suppose you earn money from a part-time job. The hourly rate tells you part of the story, but your pay statement shows deductions and take-home pay. Then transport, food, and other commitments use some of that cash. A bank balance is a snapshot, not permission to spend everything: some money may already be needed for an upcoming bill.",
+      "connection": "Knowing the amount available comes before choosing how to use it.",
+      "words": [
+        [
+          "Gross pay",
+          "Earnings before deductions."
+        ],
+        [
+          "Take-home pay",
+          "Pay after deductions."
+        ],
+        [
+          "Cash flow",
+          "Money coming in and going out over time."
+        ]
+      ],
+      "assumptions": "All money amounts and timing are invented for teaching. This is not a survey of prices, income, or tax rates. The flow view is a single example, not a recommended allocation."
+    },
+    {
+      "title": "Give your goals a line in the budget.",
+      "text": "A budget connects your money to what matters to you. Cover needs, plan for wants, and set some aside when possible. Opportunity cost means the next-best thing you give up when you choose. Small recurring costs count because they happen again. And again. And again.",
+      "aside": "After $35 for basics, split what remains between fun and a $120 goal. The goal date assumes the same saving amount every month.",
+      "joke": "A subscription is basically a tiny bill with excellent attendance.",
+      "prompt": "Move the fun budget. Watch the goal date respond.",
+      "term": "A GOOD PLAN MAKES TRADEOFFS VISIBLE",
+      "everyday": "Suppose a concert matters more to you than another streaming service. That does not make streaming bad. It means your own priorities can guide the decision. A useful goal has an amount and a date. If the goal date is unrealistic, change the spending, the saving pace, or the deadline. A plan should be honest enough to use.",
+      "connection": "Saving is easier to understand when it is attached to something you value.",
+      "words": [
+        [
+          "Budget",
+          "A plan for income, spending, and saving."
+        ],
+        [
+          "Opportunity cost",
+          "The next-best option you give up."
+        ],
+        [
+          "Recurring expense",
+          "A cost that repeats, such as a monthly subscription."
+        ]
+      ],
+      "assumptions": "Essentials are fixed in this illustration. Flexible spending and saving divide the remaining money. Goal periods = ceiling(goal ÷ saving per period). No interest, price changes, or income changes are modeled."
+    },
+    {
+      "title": "Build a buffer for plot twists.",
+      "text": "Savings can hold a future goal or cushion an unexpected cost. An emergency fund is accessible money for surprises. Its right size depends on your situation. Even a small buffer can help; if income is too low to cover needs, budgeting alone cannot fix the gap. Ask for support.",
+      "aside": "Start with $20 and add the same amount for six months. Then reveal a $60 surprise. This model leaves out interest.",
+      "joke": "Life did not put “broken headphones” on the shared calendar.",
+      "prompt": "Try different amounts. Savings are useful when you need them.",
+      "term": "A BUFFER BUYS OPTIONS",
+      "everyday": "A regular expense, such as a bus pass, belongs in the budget. An unpredictable repair might use the emergency fund. A sale does not turn a want into an emergency. Keep a buffer where you can access it without depending on a market going up. If money is tight, a trusted adult or local support resource may help you find options.",
+      "connection": "A buffer can make a surprise less likely to become expensive debt.",
+      "words": [
+        [
+          "Emergency fund",
+          "Accessible savings for unexpected costs."
+        ],
+        [
+          "Accessible",
+          "Available when you need to use it."
+        ],
+        [
+          "Shortfall",
+          "A gap between the cost and the money available."
+        ]
+      ],
+      "assumptions": "Savings = starting cash + contribution × periods. A surprise is subtracted once when switched on. Savings cannot go below zero; the remaining cost is shown separately. No interest, investment returns, insurance payment, or new borrowing is included."
+    },
+    {
+      "title": "Credit is tomorrow’s money, scheduled.",
+      "text": "Credit lets you borrow now and repay later. Interest is a borrowing cost; APR states a yearly interest rate on a credit card. Fees may add more. Check the total price, due dates, and consequences of missing a payment. A small payment can make a purchase last much longer than the excitement.",
+      "aside": "Try repaying a fictional $120 balance at 24% APR. No new purchases or fees. This simplified model adds interest monthly before payment.",
+      "joke": "“Future Me will handle it” is not a payment method.",
+      "prompt": "Change the payment. Compare time and total interest.",
+      "term": "COMPARE TOTAL COST, NOT JUST THE PAYMENT",
+      "everyday": "A split-payment offer can make a price look smaller without making the total smaller. Read each payment amount, the number of payments, and the fees. A fictional shop asking for four $15 payments collects $60 in total. If the cash price is $50, the stated plan costs $10 more. Some real plans have no interest; their terms still matter.",
+      "connection": "Borrowing is part of a budget because repayments compete with your later goals.",
+      "words": [
+        [
+          "Principal",
+          "The amount borrowed."
+        ],
+        [
+          "APR",
+          "Annual percentage rate; on a card, a yearly interest rate."
+        ],
+        [
+          "Fee",
+          "A charge that may be separate from interest."
+        ],
+        [
+          "Compounding",
+          "Interest or growth building on earlier interest or growth."
+        ]
+      ],
+      "assumptions": "Interest = opening balance × APR ÷ 12, then the fixed payment is applied. The last payment may be smaller. No new charges, fees, daily calculation, payment timing variation, or tax effects. The comparison payment is a fictional fixed amount, not a real issuer’s minimum-payment schedule."
+    },
+    {
+      "title": "Growing money is not a guaranteed glow-up.",
+      "text": "Compounding means growth can earn more growth. Investing may help with long-term goals, but prices can fall. Diversification spreads investments across different holdings; it reduces some risks, not every risk. Money needed soon deserves a different plan. Guaranteed high returns plus pressure to act are reasons to pause and check.",
+      "aside": "The curve uses a fictional steady 5% annual return. The drop button applies a 20% fall at the end. Neither is a forecast.",
+      "joke": "A stranger’s “secret guaranteed strategy” is doing a lot of acting.",
+      "prompt": "Move the years. Look at the downside as well as the upside.",
+      "term": "TIME HELPS COMPOUNDING; IT DOES NOT REMOVE RISK",
+      "everyday": "A savings goal needed next month and a long-term investing goal have different deadlines. Money invested in one company depends heavily on that company. Owning a spread of different investments can reduce that concentration, but broad markets can still fall. Check how a product works, what it costs, and who is offering it before sharing money or personal information.",
+      "connection": "A rational plan asks about the goal and the downside, as well as the possible return.",
+      "words": [
+        [
+          "Investing",
+          "Using money to seek growth while accepting the possibility of loss."
+        ],
+        [
+          "Diversification",
+          "Spreading exposure across different investments."
+        ],
+        [
+          "Return",
+          "The gain or loss on an investment."
+        ]
+      ],
+      "assumptions": "Nominal ending value = principal × (1 + (gross return − annual fee)/100)^years. Purchasing power divides that value by (1 + inflation/100)^years. Subtracting the fee from annual return is a simplified convention. The optional 20% drop is applied once at the end, to both comparison paths. No taxes, contributions, or changing returns. These are scenarios, not promised outcomes."
+    }
+  ],
+  "recap": [
+    "Use take-home income when planning spending.",
+    "Count recurring costs and protect a goal.",
+    "Keep a buffer when you can.",
+    "Compare borrowing costs and question investing hype."
+  ],
+  "action": [
+    "Check one recurring cost.",
+    "Write down a goal and a date.",
+    "Compare total cost before borrowing."
+  ],
+  "duration": "10–15 min",
+  "artAlt": "A phone showing a money group chat, headphones, and a note from Future Me.",
+  "nextAudience": "College student",
+  "budgetStep": 1,
+  "saveMax": 60,
+  "saveStep": 5,
+  "minPayment": 5,
+  "maxPayment": 60,
+  "payStep": 5
+}
