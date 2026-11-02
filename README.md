@@ -6,7 +6,7 @@ The first iteration teaches connected concepts through explanations, everyday ex
 
 ## Open the project
 
-- Intended GitHub Pages address: https://kgsucf.github.io/ENG6803IteratingPersonalFinance/
+- Published GitHub Pages address: https://kgsucf.github.io/ENG6803IteratingPersonalFinance/
 - Open `index.html` on a web server to choose one course or start the serial five-course tour.
 - Estimated time: 8–12 minutes for the child course; 10–15 minutes for each other course. These are editorial estimates; no learner timing study has been performed.
 
@@ -65,3 +65,7 @@ Each course uses a separate `money-moves:v1:<folder>` local-storage key. Stored 
 ## Assignment record
 
 `docs/iteration-01.md` records the delivered baseline, requirements, and checks. Proposed improvements are intentionally left to Karen; no AI-generated improvement list or user-testing results have been added.
+
+## Published first iteration
+
+![Published Money Moves course entrance](docs/iteration-01-preview.jpg)
