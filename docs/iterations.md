@@ -4,7 +4,7 @@ The root website is the latest working version. Each completed iteration receive
 
 ## What is preserved
 
-The copy contains its own entrance page, sources page, five course folders, JavaScript, styles, JSON content, illustrations, and favicon. No runtime asset depends on the changing root app. Browser-storage keys are scoped to the iteration; an update to the latest version cannot replace the saved version’s learning notes or progress.
+The copy contains its own entrance page, sources page, five course folders, the shared money game (`game/`, from Iteration 05 onward), JavaScript, styles, JSON content, illustrations, and favicon. No runtime asset depends on the changing root app. Browser-storage keys are scoped to the iteration; an update to the latest version cannot replace the saved version’s learning notes or progress.
 
 The only snapshot transformations isolate storage keys and, when present, make the global archive link point to the surrounding archive page. Teaching content and appearance are copied from the recorded source commit.
 

@@ -30,7 +30,9 @@ async function collect(relative){
  }
 }
 // Capture the complete runtime; do not share course assets with the changing root.
-for(const item of ['.nojekyll','index.html','sources.html','assets','child','teen','college','post-college','expert'])await collect(item);
+// The shared money game (Version 5+) is copied with its own scripts, styles, and art so a snapshot never loads it from the root.
+const runtime=['.nojekyll','index.html','sources.html','assets','child','teen','college','post-college','expert','game'];
+for(const item of runtime)await collect(item);
 const createdAt=new Date().toISOString();
 const manifest={schemaVersion:1,id,label,description,createdAt,sourceCommit,storageNamespace:`money-moves:${id}:`,note:'Runtime copied from the source commit. Runtime transformations isolate browser progress and notes for this iteration and route the global archive link to its parent archive page.',files:entries.map(({path,sourceSha256,sha256})=>({path,sourceSha256,sha256}))};
 await mkdir(archives,{recursive:true});

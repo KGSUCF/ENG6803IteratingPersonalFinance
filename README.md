@@ -2,12 +2,13 @@
 
 Five independently editable, illustrated introductions to personal finance, created for Karen Strouse’s **ENG6803IteratingPersonalFinance** assignment.
 
-Money Moves teaches connected concepts through explanations, everyday examples, interactive illustrations, chapter glossaries, and a final recap. Version 4 adds optional five-idea summaries and five-question knowledge checks tailored to each audience, retaining the friendlier teaching voice, original italic comments, and Version 3 playback. It is an introduction rather than a comprehensive curriculum or a personalized financial plan.
+Money Moves teaches connected concepts through explanations, everyday examples, interactive illustrations, chapter glossaries, and a final recap. Version 4 added optional five-idea summaries and five-question knowledge checks tailored to each audience. Version 5 adds **Ten Paydays in Pocketford**, an optional money-choice game shared by all five levels, retaining the courses, friendlier teaching voice, original italic comments, Version 3 playback, and Version 4 quizzes. It is an introduction rather than a comprehensive curriculum or a personalized financial plan.
 
 ## Open the project
 
 - Published GitHub Pages address: https://kgsucf.github.io/ENG6803IteratingPersonalFinance/
 - Open `index.html` on a web server to choose one course or start the serial five-course tour.
+- Play the game: open `game/` from the entrance (“Play the game”) or from any course's “Play the money game” link. About 5–10 minutes (an editorial estimate).
 - Estimated time: 8–12 minutes for the child course; 10–15 minutes for each other course. Optional quizzes add an estimated 2–4 minutes per level. These are editorial estimates; no learner timing study has been performed.
 
 ## Preserved iterations
@@ -18,6 +19,7 @@ Money Moves teaches connected concepts through explanations, everyday examples, 
 - **Fixed Iteration 02:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-02/
 - **Fixed Iteration 03:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-03/
 - **Fixed Iteration 04:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-04/
+- **Fixed Iteration 05:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-05/
 
 Each saved iteration has its own complete runtime files and browser-storage namespace. Future edits to the root app do not change those files or overwrite the saved version’s progress. Use a numbered iteration URL when citing the assignment. `AGENTS.md` records the rule that previously saved iterations must stay unchanged; `npm test` checks their recorded file hashes.
 
@@ -34,6 +36,10 @@ The snapshot command creates a new folder and refuses an existing iteration numb
 | `expert/` | Expert | The Assumption Lab: analysis dashboard |
 
 Every folder has its **own** `index.html`, `content.json`, `lesson.js`, `quiz.js`, `model.js`, `style.css`, and `scene.svg`. No course imports another course’s content, style, engine, or calculations. The root hub and sources page are shared entrance/reference pages. Each course can be changed separately while keeping its folder and URL identity. The favicon and source/home links use the root; core teaching and models live entirely within the course folder.
+
+## The shared money game
+
+`game/` holds Ten Paydays in Pocketford: `index.html`, `game.js` (interface and animation), `engine.js` (rules and arithmetic as pure, tested functions), `game.css`, and `pocketford.svg`. It belongs to no single course; each course only links to it (`../game/?from=<course>`), and the game offers a link back to that course. See `docs/iteration-05.md` for the teaching design, assumptions, and verification.
 
 To revise one course, edit only its `content.json`, `style.css`, illustration, or JavaScript as needed. The initial engines and models are intentionally duplicated to preserve independent editing. No generator or build step is required or used for deployment.
 
@@ -65,7 +71,7 @@ Requires Node 20 or newer; no dependency installation:
 npm test
 ```
 
-Tests cover conservation of money, zero-saving and debt boundaries, interest repayment, timing gaps, inflation/fee arithmetic, lesson integrity, and local HTML links at a GitHub Pages project subpath. See `docs/iteration-01.md` for the first-version record and verification limits.
+Tests cover the money game (conservation of money across thousands of simulated playthroughs, loan schedules, shortfalls, market paths, and storage isolation), conservation of money, zero-saving and debt boundaries, interest repayment, timing gaps, inflation/fee arithmetic, lesson integrity, and local HTML links at a GitHub Pages project subpath. See `docs/iteration-01.md` for the first-version record and verification limits.
 
 ## GitHub Pages
 
@@ -73,11 +79,11 @@ Use **Settings → Pages → Deploy from a branch → main → /(root)**. The ro
 
 ## Browser storage
 
-Each course uses a separate `money-moves:v1:<folder>` local-storage key. Stored data consists of chapter visits, last chapter, self-marked completion, an optional reminder, optional learning notes, and update/completion timestamps. Visits and completion are not mastery assessments. No account, analytics, advertising, or external font service is included. Quiz answers and scores remain in page memory, are not exported or saved, and reset on leaving the recap or reloading. A learner can download or clear this project’s notes/progress from the hub. Blocked storage does not prevent lesson use.
+Each course uses a separate `money-moves:v1:<folder>` local-storage key. Stored data consists of chapter visits, last chapter, self-marked completion, an optional reminder, optional learning notes, and update/completion timestamps. Visits and completion are not mastery assessments. No account, analytics, advertising, or external font service is included. Quiz answers and scores remain in page memory, are not exported or saved, and reset on leaving the recap or reloading. A learner can download or clear this project’s notes/progress from the hub. Blocked storage does not prevent lesson use. The money game saves its place, choices, and animation setting under its own `money-moves:game:pocketford:v1` key; it never reads or changes course data, and “Start over” in the game clears only that key.
 
 ## Assignment record
 
-`docs/iteration-01.md` records the delivered baseline, requirements, and checks. `docs/iteration-02.md` records the requested friendlier teaching voice and its verification. `docs/iteration-04.md` records the optional summaries and knowledge checks. Proposed improvements are intentionally left to Karen; no AI-generated improvement list or user-testing results have been added.
+`docs/iteration-01.md` records the delivered baseline, requirements, and checks. `docs/iteration-02.md` records the requested friendlier teaching voice and its verification. `docs/iteration-04.md` records the optional summaries and knowledge checks. `docs/iteration-05.md` records the money-choice game, its assumptions, and its verification. Proposed improvements are intentionally left to Karen; no AI-generated improvement list or user-testing results have been added.
 
 ## Published first iteration
 
