@@ -180,5 +180,73 @@
   "saveStep": 10,
   "minPayment": 15,
   "maxPayment": 200,
-  "payStep": 5
+  "payStep": 5,
+  "review": {
+    "title": "The no-cramming money check",
+    "intro": "Five concepts, no blue book. Your rent deadline has volunteered to proctor, but we declined.",
+    "summary": [
+      "Cash flow checks when money arrives, not just whether the month ends positive. Borrowed cash still needs repayment.",
+      "Budget for priorities and the full period your money must cover. Choosing one use limits another.",
+      "Keep accessible savings for surprises; planned annual costs belong in the plan too.",
+      "Read the borrowing terms. Interest, fees, payment size, and loan type affect repayment.",
+      "Match the time horizon and risk to the money’s purpose. Compounding illustrations are scenarios, not forecasts."
+    ],
+    "questions": [
+      {
+        "chapter": 0,
+        "prompt": "Your month ends with money left, but rent is due before your paycheck arrives. What is the problem?",
+        "choices": [
+          "A cash-flow timing gap",
+          "Proof that your monthly expenses exceed income",
+          "Proof that borrowing is income you never repay"
+        ],
+        "answer": 0,
+        "explanation": "Monthly totals can hide a bill arriving before the cash. A calendar reveals the gap. An agreed due-date change can help timing without changing the total money earned or spent."
+      },
+      {
+        "chapter": 1,
+        "prompt": "Why plan a large aid deposit across the semester?",
+        "choices": [
+          "A deposit automatically renews each month",
+          "Every dollar in the deposit is free of conditions",
+          "It may need to cover many weeks of costs, and some of it may be borrowed"
+        ],
+        "answer": 2,
+        "explanation": "A large balance is not the same as a large weekly allowance. Check the source, conditions, and time it must cover before it becomes a very impressive pizza order."
+      },
+      {
+        "chapter": 2,
+        "prompt": "A known annual bill and an unexpected repair both need money. How should you think about them?",
+        "choices": [
+          "Both are always emergencies",
+          "Plan for the known bill and keep a cushion for surprises",
+          "Ignore the annual bill until it sends reminders"
+        ],
+        "answer": 1,
+        "explanation": "A predictable annual bill can be saved for in advance. Emergency savings serve unplanned needs. Your laptop does not schedule its dramatic exit, but the annual bill usually does."
+      },
+      {
+        "chapter": 3,
+        "prompt": "What does the credit-card illustration tell you about student loans?",
+        "choices": [
+          "The exact payment for every student loan",
+          "That student loans and cards have identical rules",
+          "Only a general interest idea; each product has its own terms"
+        ],
+        "answer": 2,
+        "explanation": "The illustration models a fictional card balance. Student-loan rates, repayment options, and protections follow their own terms. One calculator cannot wear every product’s graduation cap."
+      },
+      {
+        "chapter": 4,
+        "prompt": "What is compounding?",
+        "choices": [
+          "Growth earning additional growth over time",
+          "A guarantee against losses",
+          "A way to ignore fees and risk"
+        ],
+        "answer": 0,
+        "explanation": "Earlier growth can itself earn growth. That explains the arithmetic, not what markets must do. A smooth line is a teaching aid with unusually good posture."
+      }
+    ]
+  }
 }

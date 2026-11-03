@@ -173,5 +173,73 @@
   "saveStep": 1,
   "minPayment": 1,
   "maxPayment": 10,
-  "payStep": 1
+  "payStep": 1,
+  "review": {
+    "title": "The piggy bank pop quiz",
+    "intro": "Five little questions. No timer, no trouble, and absolutely no homework from the piggy bank.",
+    "summary": [
+      "Money coming in can be spent now or saved for later. Each dollar gets one job.",
+      "A budget makes room for needs, wants, and goals. Choosing one thing means giving up another.",
+      "Saving can help with both a planned goal and a surprise need. Ask a trusted adult when you need help.",
+      "Borrowing means paying money back. Ask how much you must repay altogether.",
+      "Compounding is growth earning more growth. Investments can lose money, so ask a trusted adult before making money choices."
+    ],
+    "questions": [
+      {
+        "chapter": 0,
+        "prompt": "You put a gift of $5 into your saving jar. What is saving?",
+        "choices": [
+          "Money you have lost",
+          "Money you keep to use later",
+          "Money that belongs to the jar"
+        ],
+        "answer": 1,
+        "explanation": "The money is still yours. Saving gives it a later job. The jar is a helpful container, not its new landlord."
+      },
+      {
+        "chapter": 1,
+        "prompt": "You choose stickers today instead of saving that money for a kite. What is the tradeoff?",
+        "choices": [
+          "The kite money has to wait",
+          "The stickers also pay for the kite",
+          "You are never allowed to buy stickers"
+        ],
+        "answer": 0,
+        "explanation": "The same money cannot buy stickers and wait for a kite. Treats can be part of a plan; choosing them changes what is left for later."
+      },
+      {
+        "chapter": 2,
+        "prompt": "What is an emergency fund for?",
+        "choices": [
+          "Only the most exciting toys",
+          "Making every problem disappear",
+          "Helping with surprise needs"
+        ],
+        "answer": 2,
+        "explanation": "A surprise jar can help with an unexpected repair. If it is not enough, ask a trusted adult. You do not have to solve every money problem yourself."
+      },
+      {
+        "chapter": 3,
+        "prompt": "In our pretend deal, you borrow $6 and repay $7. What is the extra borrowing cost?",
+        "choices": [
+          "$7",
+          "$1",
+          "$6"
+        ],
+        "answer": 1,
+        "explanation": "The original $6 is the principal. The extra $1 is the borrowing cost. Borrowing gets money now and gives your future money a job."
+      },
+      {
+        "chapter": 4,
+        "prompt": "Which statement about investing is true?",
+        "choices": [
+          "It can grow or lose money",
+          "It always makes you rich",
+          "It is the best home for next week’s lunch money"
+        ],
+        "answer": 0,
+        "explanation": "Investing involves risk. Money needed soon needs to be ready for its job. Get help from a trusted adult; a smooth pretend chart is not a promise."
+      }
+    ]
+  }
 }

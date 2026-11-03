@@ -176,5 +176,73 @@
   "saveStep": 5,
   "minPayment": 5,
   "maxPayment": 60,
-  "payStep": 5
+  "payStep": 5,
+  "review": {
+    "title": "The group-chat fact check",
+    "intro": "Five money takes. See which ones deserve a thumbs-up before the group chat declares itself a financial institution.",
+    "summary": [
+      "Income is money coming in; expenses and saving decide where it goes.",
+      "A budget connects your priorities to the money actually available. Every choice has a tradeoff.",
+      "Keep an accessible cushion for surprises, alongside money for planned goals.",
+      "Compare the total cost of borrowing. Interest and small payments can keep debt around longer.",
+      "Compounding takes time, and investing involves risk. A promised return is a reason to ask questions."
+    ],
+    "questions": [
+      {
+        "chapter": 0,
+        "prompt": "Which description best fits income?",
+        "choices": [
+          "Anything you would like to buy",
+          "Only the money left after shopping",
+          "Money coming in, such as pay from a job"
+        ],
+        "answer": 2,
+        "explanation": "Income is money arriving. Expenses are money leaving. A wishlist can be excellent entertainment, but it is not a deposit."
+      },
+      {
+        "chapter": 1,
+        "prompt": "A budget is most useful as…",
+        "choices": [
+          "A ban on having fun",
+          "A plan connecting spending and saving to your priorities",
+          "A prediction that nothing will change"
+        ],
+        "answer": 1,
+        "explanation": "A useful plan makes tradeoffs visible and can be adjusted. Fun can have a place in it; the plan just needs the available money to cover its jobs."
+      },
+      {
+        "chapter": 2,
+        "prompt": "Why keep emergency savings accessible?",
+        "choices": [
+          "A surprise bill may arrive before a long-term investment recovers",
+          "Accessible money never gets spent",
+          "Every surprise costs exactly the same"
+        ],
+        "answer": 0,
+        "explanation": "A cushion can help you respond without selling something at a bad time or immediately borrowing. Its size depends on your situation; surprises do not use a price list."
+      },
+      {
+        "chapter": 3,
+        "prompt": "For the same debt and interest rate, why can a smaller payment cost more overall?",
+        "choices": [
+          "Small payments erase interest",
+          "Interest stops after the first payment",
+          "The balance can stay around earning interest longer"
+        ],
+        "answer": 2,
+        "explanation": "When the payment covers interest and reduces principal only slowly, repayment takes longer and total interest can grow. The debt has discovered an extended-stay package."
+      },
+      {
+        "chapter": 4,
+        "prompt": "A friend says a smooth growth chart proves an investment cannot lose. What is missing?",
+        "choices": [
+          "A brighter line color",
+          "Real returns can change and losses can happen",
+          "A longer caption guarantees the result"
+        ],
+        "answer": 1,
+        "explanation": "The chart shows assumptions, not a guarantee. Time can support compounding, but it cannot remove investment risk. The line has no inside information."
+      }
+    ]
+  }
 }

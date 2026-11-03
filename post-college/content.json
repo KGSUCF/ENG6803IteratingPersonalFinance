@@ -184,5 +184,73 @@
   "saveStep": 25,
   "minPayment": 50,
   "maxPayment": 500,
-  "payStep": 25
+  "payStep": 25,
+  "review": {
+    "title": "The real-life readiness check",
+    "intro": "Five questions. No one will ask you to assemble a bookshelf afterward. Probably.",
+    "summary": [
+      "Track income, bills, and dates together so the money is there when needed.",
+      "Give essentials, flexible spending, and future goals realistic jobs in your budget.",
+      "An accessible reserve and insurance can address different parts of a surprise; coverage has conditions.",
+      "A loan creates future payments. Compare total cost and affordability, not just the monthly number.",
+      "Investing choices depend on goals, time, fees, and risk. Hypothetical growth is not a promised outcome."
+    ],
+    "questions": [
+      {
+        "chapter": 0,
+        "prompt": "Why track bill dates as well as monthly totals?",
+        "choices": [
+          "Dates make expenses disappear",
+          "Money must be available when a payment is due",
+          "Paydays always arrive before bills"
+        ],
+        "answer": 1,
+        "explanation": "A positive monthly total can still hide a shortfall mid-month. Your budget needs both an amount and a calendar; the calendar has a surprisingly active role."
+      },
+      {
+        "chapter": 1,
+        "prompt": "What is the opportunity cost of using money for one goal?",
+        "choices": [
+          "The alternative use you give up",
+          "A fee charged on every purchase",
+          "Proof the goal is a bad choice"
+        ],
+        "answer": 0,
+        "explanation": "Choosing one use limits what that money can do elsewhere. A tradeoff is not a moral verdict; it helps you decide which job matters most right now."
+      },
+      {
+        "chapter": 2,
+        "prompt": "Why might savings still matter if you have insurance?",
+        "choices": [
+          "Insurance never pays anything",
+          "Savings make insurance terms irrelevant",
+          "Deductibles, exclusions, or timing can leave costs to cover"
+        ],
+        "answer": 2,
+        "explanation": "A policy covers particular risks under particular terms. Accessible savings can cover a deductible or a gap. Read the conditions; the policy title is not the entire plot."
+      },
+      {
+        "chapter": 3,
+        "prompt": "Which comparison gives a fuller picture of two borrowing offers?",
+        "choices": [
+          "Only the smallest monthly payment",
+          "Rate, fees, term, total repayment, and fit with future cash flow",
+          "Only the lender’s slogan"
+        ],
+        "answer": 1,
+        "explanation": "A smaller monthly payment can spread costs over longer and increase total interest. Compare the full agreement and what future budgets can support. Slogans rarely make payments."
+      },
+      {
+        "chapter": 4,
+        "prompt": "Which statement about investing and time is sound?",
+        "choices": [
+          "A longer horizon guarantees a profit",
+          "Fees cannot matter over time",
+          "Time affects compounding, but losses remain possible"
+        ],
+        "answer": 2,
+        "explanation": "Compounding works over time, and fees affect what stays invested. Risk still matters. A future goal deserves assumptions you understand, rather than a chart auditioning as a crystal ball."
+      }
+    ]
+  }
 }

@@ -192,5 +192,73 @@
   "saveStep": 50,
   "minPayment": 100,
   "maxPayment": 1500,
-  "payStep": 50
+  "payStep": 50,
+  "review": {
+    "title": "The assumption audit",
+    "intro": "Five claims enter the lab. Bring your skepticism; the spreadsheet has already brought its confidence.",
+    "summary": [
+      "Solvency across a period does not guarantee liquidity on every due date.",
+      "Opportunity cost connects an allocation to the alternatives it displaces.",
+      "Liquidity reserves and risk transfer address different exposures; assumptions determine the gaps.",
+      "Amortization depends on rate, payment, and timing. Payments must exceed interest to reduce principal in this model.",
+      "Separate nominal value from purchasing power, account for fees, and test adverse scenarios. A deterministic path is not a forecast."
+    ],
+    "questions": [
+      {
+        "chapter": 0,
+        "prompt": "What can a positive month-end balance fail to establish?",
+        "choices": [
+          "Whether any money arrived during the month",
+          "Whether every obligation could be met on its due date",
+          "Whether expenses have monetary amounts"
+        ],
+        "answer": 1,
+        "explanation": "An aggregate surplus does not establish liquidity at each point in time. A dated cash-flow path can reveal an interim funding gap. The sum is correct; its alibi is incomplete."
+      },
+      {
+        "chapter": 1,
+        "prompt": "What does opportunity cost add to an allocation decision?",
+        "choices": [
+          "The value of the alternative forgone",
+          "A guarantee of the selected outcome",
+          "A rule to maximize only current consumption"
+        ],
+        "answer": 0,
+        "explanation": "An allocation uses resources that could serve another goal. Evaluating the displaced alternative makes the choice explicit; it does not prescribe the same priorities for everyone."
+      },
+      {
+        "chapter": 2,
+        "prompt": "Why distinguish liquid reserves from insurance coverage?",
+        "choices": [
+          "Insurance removes all uncertainty",
+          "A reserve guarantees every loss can be funded",
+          "They address different exposures and can leave different gaps"
+        ],
+        "answer": 2,
+        "explanation": "Insurance transfers specified risks under terms that may include deductibles and exclusions. Liquidity supports cash needs, including timing gaps. Neither label alone establishes full resilience."
+      },
+      {
+        "chapter": 3,
+        "prompt": "In the monthly debt model, a payment equals that month’s interest. What happens to principal?",
+        "choices": [
+          "It falls by the full payment",
+          "It stays unchanged",
+          "It is automatically forgiven"
+        ],
+        "answer": 1,
+        "explanation": "The payment covers interest but leaves nothing to reduce principal. Under these assumptions, paying off the balance requires more than the accrued interest. The principal has renewed its lease."
+      },
+      {
+        "chapter": 4,
+        "prompt": "What does an inflation-adjusted ending value represent?",
+        "choices": [
+          "Ending account dollars expressed in today’s buying power",
+          "A guaranteed future cash balance",
+          "A tax-adjusted return in all circumstances"
+        ],
+        "answer": 0,
+        "explanation": "Dividing nominal value by the modeled inflation factor estimates purchasing power in today’s dollars. Fees, taxes, and uncertainty remain separate considerations; this illustration does not model taxes."
+      }
+    ]
+  }
 }
