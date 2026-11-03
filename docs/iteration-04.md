@@ -21,3 +21,5 @@ Optional quizzes are estimated to add 2–4 minutes per level. This is an editor
 ## Publication and preservation
 
 Published through the existing GitHub Pages setup. The complete Version 4 runtime is preserved at `iterations/iteration-04/`, with an actual source commit and independent browser-storage namespace recorded by the snapshot tool. Versions 1, 2, and 3 are not edited by this iteration. See the snapshot manifest for source provenance and file hashes.
+
+Live publication check: opened the preserved Version 4 hub and college course on GitHub Pages, started the quiz, selected an answer, and observed its explanatory feedback. Screenshot: `iteration-04-live-feedback.jpg`.
