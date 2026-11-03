@@ -68,4 +68,8 @@ Not verified: physical phones, screen readers, or learner testing. The 5–10 mi
 
 ## Publication
 
-Recorded after the Version 6 snapshot is created and published.
+- Source commit for the snapshot: `71237e130a39760b69bb850ea1fa3e7fcccc5241`. The working tree was clean when the snapshot was made, so every copied runtime file matched that commit.
+- `iterations/iteration-06/` was created with `scripts/freeze-iteration.mjs` (47 runtime files). `npm test` then passed 53 checks, including the recorded hashes of Iterations 01–06. Git tree hashes for `iteration-01` to `iteration-05` were identical to the baseline.
+- Local browser check of the preserved copy: entrance → game → a course → back stayed under `iterations/iteration-06/`. No file loaded from outside it. Its saved game used `money-moves:iteration-06:game:pocketford:v2`. The latest `game/` and `iterations/iteration-05/game/` each still showed a fresh start. The archive page lists Iterations 01–06.
+- Pushed to `main` as commit `7a4e255`, which triggered GitHub's "pages build and deployment" run.
+- Live site: this work environment cannot reach `kgsucf.github.io`, so the published pages have not been opened here. They should be checked in a browser.
