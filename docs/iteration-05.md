@@ -83,3 +83,11 @@ Not verified: physical phones, screen readers, or real learners. No learner test
 - Interest is simplified to a monthly rate on the balance at each payday; real lenders may compute interest daily and set different minimums.
 - The savings jar pays no interest, and inflation, taxes, and fees are omitted, as stated in the game.
 - The good-times stars are a deliberately rough reminder that enjoyment counts; they do not measure wellbeing.
+
+## Publication
+
+- Source commit for the snapshot: `7fa03cfef261eb644a911c6c86f222433d8226e9` (working tree was clean at freeze time, so every copied runtime file matched it).
+- `iterations/iteration-05/` was created with `scripts/freeze-iteration.mjs` (47 runtime files). `npm test` then passed 50 checks, including the recorded hashes of Iterations 01–05. Git showed no changes in `iterations/iteration-01` to `iteration-04`.
+- The preserved copy was checked in a local browser: entrance → game → a course → back stayed under `iterations/iteration-05/`; its saved game used `money-moves:iteration-05:game:pocketford:v1`, while the latest `game/` showed a fresh start; no file loaded from outside the snapshot.
+- Pushed to `main` (commit `8895ee1`). GitHub's “pages build and deployment” run for that commit completed successfully.
+- Not yet verified: opening the live GitHub Pages URLs. This work environment's network policy blocks `kgsucf.github.io`, so the live entrance, game, and navigation still need to be opened in a browser.
