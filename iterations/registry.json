@@ -19,5 +19,12 @@
     "description": "Fixed chart scales, larger labels, and animated growth with play and pause.",
     "createdAt": "2026-11-02T22:22:08.496Z",
     "sourceCommit": "a1a3ad312406c0320c8f0b7f95e50d6bca9857f1"
+  },
+  {
+    "id": "iteration-04",
+    "label": "Iteration 04",
+    "description": "Optional summaries and five-question quizzes for all five audiences, with explanatory feedback, retries, and chapter review.",
+    "createdAt": "2026-11-03T00:15:27.080Z",
+    "sourceCommit": "3b553ac51581e0a2dfe60923f1201e74bd40e189"
   }
 ]
