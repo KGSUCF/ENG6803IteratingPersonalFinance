@@ -33,5 +33,12 @@
     "description": "An interactive money-choice game with animated consequences and a personalized learning recap.",
     "createdAt": "2026-11-03T12:33:33.322Z",
     "sourceCommit": "7fa03cfef261eb644a911c6c86f222433d8226e9"
+  },
+  {
+    "id": "iteration-06",
+    "label": "Iteration 06",
+    "description": "Surprises that stay surprising: shuffled decisions, random emergencies and luck events, and investment changes drawn fresh for every game.",
+    "createdAt": "2026-11-03T15:15:03.264Z",
+    "sourceCommit": "71237e130a39760b69bb850ea1fa3e7fcccc5241"
   }
 ]
