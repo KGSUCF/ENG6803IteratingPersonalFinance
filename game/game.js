@@ -1,7 +1,8 @@
 // Ten Paydays in Pocketford — interface, animation, and saved-game handling.
 import * as E from './engine.js';
 
-const KEY = 'money-moves:game:pocketford:v1';
+// v2: Version 6 games shuffle events, so a Version 5 (v1) save cannot be resumed here; it is left untouched.
+const KEY = 'money-moves:game:pocketford:v2';
 const COURSES = { child: 'The Pocket-Money Club', teen: 'The Money Group Chat', college: 'Campus Cashflow', 'post-college': 'The Real-Life Money Manual', expert: 'The Assumption Lab' };
 const NAMES = { paycheck: 'Pay', wallet: 'Wallet', savings: 'Savings jar', pot: 'Seed pot', debt: 'Debt meter', spent: 'Spent', stars: 'Good times' };
 const CAST = {
@@ -31,7 +32,7 @@ function load() {
     const saved = JSON.parse(localStorage.getItem(KEY));
     if (saved?.version === 1) {
       if (saved.prefs && typeof saved.prefs.motion === 'boolean') prefs.motion = saved.prefs.motion;
-      const valid = saved.state && saved.state.version === 1 && ['intro', 'decision', 'shortfall', 'result', 'recap'].includes(saved.state.phase);
+      const valid = saved.state && saved.state.version === 2 && Array.isArray(saved.state.schedule) && ['intro', 'decision', 'shortfall', 'result', 'recap'].includes(saved.state.phase);
       if (valid) state = saved.state;
     }
   } catch { storageOK = false; }
@@ -63,23 +64,24 @@ function goalIcon(id, size = 72) {
 // ---------- charts (fixed scales) ----------
 function potChart(history, { width = 260, height = 90, labels = false, planted = 0 } = {}) {
   const L = labels ? 52 : 6, R = 8, T = 8, B = labels ? 26 : 8;
-  const x = p => L + (p - 4) / 6 * (width - L - R), y = v => T + (1 - Math.min(v, POT_SCALE) / POT_SCALE) * (height - T - B);
+  const x = p => L + (p - 1) / 9 * (width - L - R), y = v => T + (1 - Math.min(v, POT_SCALE) / POT_SCALE) * (height - T - B);
   const pts = history.map(h => `${x(h.payday).toFixed(1)},${y(h.value).toFixed(1)}`).join(' ');
-  const grid = labels ? [0, 10000, 20000, 30000, 40000].map(v => `<line x1="${L}" x2="${width - R}" y1="${y(v)}" y2="${y(v)}" class="grid"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end" class="axis">${money(v)}</text>`).join('') + [4, 5, 6, 7, 8, 9, 10].map(p => `<text x="${x(p)}" y="${height - 6}" text-anchor="middle" class="axis">P${p}</text>`).join('') : `<line x1="${L}" x2="${width - R}" y1="${y(0)}" y2="${y(0)}" class="grid"/>`;
+  const grid = labels ? [0, 10000, 20000, 30000, 40000].map(v => `<line x1="${L}" x2="${width - R}" y1="${y(v)}" y2="${y(v)}" class="grid"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end" class="axis">${money(v)}</text>`).join('') + [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(p => `<text x="${x(p)}" y="${height - 6}" text-anchor="middle" class="axis">P${p}</text>`).join('') : `<line x1="${L}" x2="${width - R}" y1="${y(0)}" y2="${y(0)}" class="grid"/>`;
   const plantLine = planted ? `<line x1="${L}" x2="${width - R}" y1="${y(planted)}" y2="${y(planted)}" class="planted"/>${labels ? `<text x="${width - R}" y="${y(planted) - 5}" text-anchor="end" class="axis strong">planted ${money(planted)}</text>` : ''}` : '';
   return `<svg class="pot-chart" viewBox="0 0 ${width} ${height}" width="100%" preserveAspectRatio="none" aria-hidden="true" focusable="false">${grid}${plantLine}${history.length > 1 ? `<polyline points="${pts}" class="pot-line"/>` : ''}${history.map(h => `<circle cx="${x(h.payday)}" cy="${y(h.value)}" r="${labels ? 4 : 3}" class="pot-dot"/>`).join('')}</svg>`;
 }
 
 function timeChart(amount, horizon) {
-  const W = 640, H = 300, L = 70, R = 18, T = 14, B = 42, max = amount * 5, paths = E.timePaths(amount, 30);
+  const W = 640, H = 300, L = 70, R = 18, T = 14, B = 42, max = amount * 5, paths = E.timePaths(amount, 30, state?.longRun || null);
   const x = yr => L + yr / 30 * (W - L - R), y = v => T + (1 - v / max) * (H - T - B);
-  const line = (arr, cls) => `<polyline class="${cls}" points="${arr.slice(0, horizon + 1).map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ')}"/>`;
+  const line = (arr, cls) => `<polyline class="${cls}" points="${arr.slice(0, horizon + 1).map((v, i) => `${x(i).toFixed(1)},${y(Math.min(v, max)).toFixed(1)}`).join(' ')}"/>`;
   const grid = [0, 1, 2, 3, 4, 5].map(m => `<line x1="${L}" x2="${W - R}" y1="${y(amount * m)}" y2="${y(amount * m)}" class="grid"/><text x="${L - 8}" y="${y(amount * m) + 5}" text-anchor="end" class="axis">${money(Math.round(amount * m / 100) * 100)}</text>`).join('');
   const xt = [0, 5, 10, 15, 20, 25, 30].map(v => `<text x="${x(v)}" y="${H - 14}" text-anchor="middle" class="axis">${v}y</text>`).join('');
-  const s = paths.steady[horizon], r = paths.rough[horizon];
-  const desc = `Fixed scale from $0 to ${money(max)} over 0 to 30 years. After ${horizon} years, ${money(amount)} would be ${money(Math.round(s))} on a steady 5% path, ${money(Math.round(r))} on a rough path, and ${money(amount)} as cash.`;
-  return `<figure class="time-chart"><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${esc(desc)}">${grid}${xt}<line x1="${x(horizon)}" x2="${x(horizon)}" y1="${T}" y2="${H - B}" class="horizon"/>${line(paths.cash, 'cash-line')}${line(paths.steady, 'steady-line')}${line(paths.rough, 'rough-line')}<circle cx="${x(horizon)}" cy="${y(s)}" r="5" class="steady-dot"/><circle cx="${x(horizon)}" cy="${y(r)}" r="5" class="rough-dot"/></svg>
-  <figcaption><dl class="chart-values"><div><dt><span class="key steady"></span>Steady 5% a year</dt><dd>${money(Math.round(s))}</dd></div><div><dt><span class="key rough"></span>Rough path (early drops)</dt><dd>${money(Math.round(r))}</dd></div><div><dt><span class="key cash"></span>Kept as cash</dt><dd>${money(amount)}</dd></div></dl><p class="chart-note">After <strong>${horizon} ${horizon === 1 ? 'year' : 'years'}</strong>. The scale stays fixed at $0–${money(max)} so a longer horizon never shrinks the starting amount. Hypothetical paths, not a forecast or a promise: real investments can end lower than they started.</p></figcaption></figure>`;
+  const s = paths.steady[horizon], r = paths.rough[horizon], g = paths.random ? paths.random[horizon] : null;
+  const above = v => v > max ? ' (above the chart)' : '';
+  const desc = `Fixed scale from $0 to ${money(max)} over 0 to 30 years. After ${horizon} years, ${money(amount)} would be ${money(Math.round(s))} on a steady 5% path, ${money(Math.round(r))} on a rough path, ${g === null ? '' : `${money(Math.round(g))} on this game’s random path, `}and ${money(amount)} as cash.`;
+  return `<figure class="time-chart"><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${esc(desc)}">${grid}${xt}<line x1="${x(horizon)}" x2="${x(horizon)}" y1="${T}" y2="${H - B}" class="horizon"/>${line(paths.cash, 'cash-line')}${line(paths.steady, 'steady-line')}${line(paths.rough, 'rough-line')}${g === null ? '' : line(paths.random, 'random-line')}<circle cx="${x(horizon)}" cy="${y(s)}" r="5" class="steady-dot"/><circle cx="${x(horizon)}" cy="${y(r)}" r="5" class="rough-dot"/>${g === null ? '' : `<circle cx="${x(horizon)}" cy="${y(Math.min(g, max))}" r="5" class="random-dot"/>`}</svg>
+  <figcaption><dl class="chart-values"><div><dt><span class="key steady"></span>Steady 5% a year</dt><dd>${money(Math.round(s))}</dd></div><div><dt><span class="key rough"></span>Rough path (early drops)</dt><dd>${money(Math.round(r))}</dd></div>${g === null ? '' : `<div><dt><span class="key random"></span>This game’s random path</dt><dd>${money(Math.round(g))}${above(g)}</dd></div>`}<div><dt><span class="key cash"></span>Kept as cash</dt><dd>${money(amount)}</dd></div></dl><p class="chart-note">After <strong>${horizon} ${horizon === 1 ? 'year' : 'years'}</strong>. The scale stays fixed at $0–${money(max)} so a longer horizon never shrinks the starting amount. Hypothetical paths, not a forecast or a promise: real investments can end lower than they started.${g === null ? '' : ' The random path is drawn fresh for each game, so replaying shows a different one.'}</p></figcaption></figure>`;
 }
 function timeMachine(amount, title) {
   return `<section class="time-machine" data-amount="${amount}" aria-labelledby="tm-title"><h3 id="tm-title">${esc(title)}</h3><div class="horizon-buttons" role="group" aria-label="Choose how many years to show">${[1, 5, 10, 20, 30].map(h => `<button type="button" class="chip" data-horizon="${h}" aria-pressed="${h === 1}">${h} ${h === 1 ? 'year' : 'years'}</button>`).join('')}</div><div class="tm-chart">${timeChart(amount, 1)}</div></section>`;
@@ -213,11 +215,11 @@ function focusTitle() {
 
 const ASSUMPTIONS = `<details class="assumptions"><summary>Game assumptions (look closer)</summary><ul>
 <li>All people, places, prices, and businesses are fictional. Amounts are U.S. dollars to match the courses. Nothing here recommends a real product.</li>
-<li>Payday comes once a month: ${money(E.RULES.income)} after taxes. Needs cost ${money(E.RULES.needs)} each payday (rent share ${money(20000)}, groceries ${money(8000)}, bus pass and phone ${money(4000)}).</li>
+<li>Payday comes once a month: ${money(E.RULES.income)} after taxes. Needs cost ${money(E.RULES.needs)} each payday (rent share ${money(20000)}, groceries ${money(8000)}, bus pass and phone ${money(4000)}), unless a price rise adds to them.</li>
 <li>Required payments come first each payday: needs, subscriptions, then loan payments. Your automatic saving happens next, only from what is left. If the wallet cannot cover required payments, the game stops and shows the shortfall and your choices.</li>
-<li>Lending Kiosk loan: 24% APR, which the game applies as 2% of the balance each payday, with a fixed ${money(4500)} payment. Sparrow Store Card: 30% APR (2.5% each payday), ${money(2000)} minimum payment, ${money(E.RULES.cardLimit)} limit. Interest is added at the start of each payday, before the payment. A late payment adds a ${money(E.RULES.lateFee)} fee. Amounts round to the nearest cent.</li>
+<li>Lending Kiosk loan: 24% APR, which the game applies as 2% of the balance each payday, with a fixed ${money(4500)} payment. Sparrow Store Card: 30% APR (2.5% each payday), ${money(2000)} minimum payment, ${money(E.RULES.cardLimit)} limit. Dental clinic payment plan: no interest, ${money(7000)} each payday. Interest is added at the start of each payday, before the payment. A late payment adds a ${money(E.RULES.lateFee)} fee. Amounts round to the nearest cent.</li>
 <li>The savings jar never gains or loses value in this game. Real savings accounts may pay a little interest; that is left out to keep the jar simple.</li>
-<li>The seed pot is an imaginary investment. From payday 5 it follows one of three made-up monthly paths, chosen by luck when the game starts. The long-run chart uses a steady 5% a year and a rough path with early drops. These are illustrations, not forecasts; real investments can lose money and growth is never guaranteed.</li>
+<li>Each game shuffles the order of the middle decisions and draws its surprises: one emergency (a broken phone, a toothache, or split work shoes) on a random payday from 3 to 9, and two different luck events (a bonus, a gift, a refund, a fridge bill, a vet bill, or a bus-pass price rise) on two other random paydays.</li><li>The seed pot is an imaginary investment. Each game draws its own month-by-month changes, each equally likely to be −12%, −6%, −3%, −1%, 0%, +1%, +2%, +2%, +3%, +4%, +5%, or +7%. Money in the pot moves with those changes from the payday after it is planted, so it can end higher or lower than you put in. The long-run chart compares a steady 5% a year, a rough path with early drops, a fresh random path for each game, and cash. These are illustrations, not forecasts; real investments can lose money and growth is never guaranteed.</li>
 <li>Taxes on gains, investment fees, inflation, and credit scores are not modeled. The game is practice for thinking, not a financial plan.</li></ul></details>`;
 
 function renderTitle() {
@@ -225,7 +227,7 @@ function renderTitle() {
   const back = course ? `<a class="button secondary" href="../${from}/">← Back to ${esc(COURSES[course])}</a>` : '';
   app.innerHTML = `<section class="title-screen">
    <div class="title-copy"><p class="eyebrow">A MONEY MOVES GAME · FOR ALL FIVE LEVELS</p><h1>Ten Paydays in <em>Pocketford</em></h1>
-   <p class="lead">You have just moved to the little town of Pocketford and started a job at the corner bakery. Over ten monthly paydays, make choices, handle a surprise or two, and work toward a goal you pick.</p>
+   <p class="lead">You have just moved to the little town of Pocketford and started a job at the corner bakery. Over ten monthly paydays, make choices, handle surprises, and work toward a goal you pick. The surprises, their timing, and the seed pot’s ups and downs change every time you play.</p>
    <div class="title-actions">${saved ? `<button type="button" class="button primary" id="continue">Continue ${saved.phase === 'recap' ? 'to my recap' : `from payday ${saved.payday}`} <span aria-hidden="true">→</span></button><button type="button" class="button secondary" id="new">Start a new game</button>` : `<button type="button" class="button primary" id="start">Start the game <span aria-hidden="true">→</span></button>`}${back}</div>
    <p class="small">About 5–10 minutes · Ten decisions · No sign-in · Fictional money only</p></div>
    <figure class="title-art"><img src="pocketford.svg" width="640" height="420" alt="The town of Pocketford: a bakery, an apartment building, a bike co-op, and a park bench where a tortoise sits beside a raccoon and a badger."></figure>
@@ -234,6 +236,7 @@ function renderTitle() {
    <li><strong>Pick a goal.</strong> A bike, a beach weekend, or a keyboard. Each has a price.</li>
    <li><strong>Get paid, pay needs.</strong> Each payday brings ${money(E.RULES.income)}. Needs take ${money(E.RULES.needs)}. Watch the money move on your dashboard.</li>
    <li><strong>Make a choice.</strong> Tap one option. Some cost money now; some change future paydays. Choices you cannot afford show exactly how much you are short.</li>
+   <li><strong>Expect the unexpected.</strong> An emergency and two strokes of luck, good or bad, turn up on paydays you cannot see coming. They are different every game.</li>
    <li><strong>See what changed.</strong> Read why it matters and what you traded. Open “Look closer” for more depth. Move on when you are ready; nothing disappears on a timer.</li></ol>
    <div class="resources"><h3>Your dashboard</h3><ul><li><strong>Wallet:</strong> cash ready to spend. You start with ${money(E.RULES.startWallet)}.</li><li><strong>Savings jar:</strong> money set aside. Steady and easy to reach; it never loses value here.</li><li><strong>Seed pot:</strong> a pretend investment that can rise or fall.</li><li><strong>Debt meter:</strong> anything you owe, including interest.</li><li><strong>Good times:</strong> stars for the fun you chose. Enjoyment counts too.</li></ul></div>
   </section>
@@ -247,7 +250,7 @@ function renderTitle() {
 }
 
 function renderGoal() {
-  app.innerHTML = `${header()}<section class="goal-screen"><p class="eyebrow">BEFORE PAYDAY 1</p><h2>What are you saving for?</h2><p class="lead">Pick the goal that sounds most fun to you. Prices differ, and so does how long each one takes.</p><div class="goal-grid">${Object.values(E.GOALS).map(goal => `<button type="button" class="goal-card" data-goal="${goal.id}">${goalIcon(goal.id)}<span class="goal-name">${esc(goal.name)}</span><span class="goal-price">${money(goal.cost)}</span><span class="goal-why">${esc(goal.why)}</span></button>`).join('')}</div><p class="small">Luck will also play a part in your game, as it does in life. It is drawn at random and revealed as you play.</p></section>`;
+  app.innerHTML = `${header()}<section class="goal-screen"><p class="eyebrow">BEFORE PAYDAY 1</p><h2>What are you saving for?</h2><p class="lead">Pick the goal that sounds most fun to you. Prices differ, and so does how long each one takes.</p><div class="goal-grid">${Object.values(E.GOALS).map(goal => `<button type="button" class="goal-card" data-goal="${goal.id}">${goalIcon(goal.id)}<span class="goal-name">${esc(goal.name)}</span><span class="goal-price">${money(goal.cost)}</span><span class="goal-why">${esc(goal.why)}</span></button>`).join('')}</div><p class="small">Luck will also play a part, as it does in life. Your surprises and the seed pot’s monthly changes are drawn at random for this game and revealed as you play.</p></section>`;
   bindHeader();
   app.querySelectorAll('[data-goal]').forEach(btn => btn.addEventListener('click', () => {
     state = E.chooseGoal(state, btn.dataset.goal);
@@ -274,7 +277,7 @@ function renderPlay(animate) {
 }
 
 function turnPanel() {
-  const t = state.turn, notes = t.notes.map(n => `<div class="callout ${n.type}" role="note">${n.type === 'luck' ? '<span class="callout-tag">LUCK DRAW</span>' : ''}<strong>${esc(n.title)}</strong><p>${esc(n.text)}</p></div>`).join('');
+  const t = state.turn, notes = t.notes.map(n => `<div class="callout ${n.type}${n.type === 'luck' ? (n.good ? ' good' : ' bad') : ''}" role="note">${n.type === 'luck' ? `<span class="callout-tag">${n.good ? 'LUCKY BREAK' : 'SURPRISE COST'}</span>` : ''}<strong>${esc(n.title)}</strong><p>${esc(n.text)}</p></div>`).join('');
   return `<section class="turn" aria-labelledby="turn-title"><div class="turn-head"><h3 id="turn-title">Payday ${t.payday}: money in and out</h3><div class="turn-buttons"><button type="button" class="text-button" data-skip hidden>Skip animation</button><button type="button" class="text-button" data-replay="turn">Replay</button></div></div>${receiptHTML(t.flows, 'turn-lines')}${notes}</section>`;
 }
 
@@ -313,7 +316,7 @@ function renderStep(before, animate) {
     }));
   } else {
     const d = E.currentDecision(state);
-    const chart = d.chart ? (state.pot.contributed && d.id === 'checkin' ? `<section class="pot-history" aria-label="Seed pot value by payday, fixed scale from $0 to $400">${potChart(state.pot.history, { width: 560, height: 220, labels: true, planted: state.pot.contributed })}<p class="chart-note">Market path so far: ${esc(E.MARKETS[state.market].returns.slice(0, state.payday - 4).map(r => `${r > 0 ? '+' : ''}${r}%`).join(', '))}. Fixed $0–$400 scale.</p></section>` : '') + `<details class="look-closer"><summary>Look closer: what can time do to ${money(Math.max(10000, state.pot.contributed || 10000))}?</summary>${timeMachine(Math.max(10000, state.pot.contributed || 10000), 'A long-run view (hypothetical)')}</details>` : '';
+    const chart = d.chart ? (state.pot.contributed && d.id === 'checkin' ? `<section class="pot-history" aria-label="Seed pot value by payday, fixed scale from $0 to $400">${potChart(state.pot.history, { width: 560, height: 220, labels: true, planted: state.pot.contributed })}<p class="chart-note">Monthly changes since you planted: ${esc(state.pot.moves.map(r => `${r > 0 ? '+' : ''}${r}%`).join(', ') || 'none yet')}. Fixed $0–$400 scale; the dashed line is what you put in.</p></section>` : '') + `<details class="look-closer"><summary>Look closer: what can time do to ${money(Math.max(10000, state.pot.contributed || 10000))}?</summary>${timeMachine(Math.max(10000, state.pot.contributed || 10000), 'A long-run view (hypothetical)')}</details>` : '';
     stage.innerHTML = `${turnPanel()}<article class="card ${d.event ? 'event' : ''}" data-decision="${d.id}"><div class="speaker">${portrait(d.speaker)}<div><p class="kicker">${esc(d.kicker)}</p><p class="who">${esc(CAST[d.speaker].name)}${d.event ? ' · <span class="event-tag">Unexpected event</span>' : ''}</p></div></div>
      <h2>${esc(d.title)}</h2><p class="lead">${esc(d.text)}</p><p class="aside"><em>${esc(d.aside)}</em></p>${chart}
      <ul class="options" aria-label="Your choices">${d.options.map(optionHTML).join('')}</ul>
@@ -389,7 +392,7 @@ function postcard(sum) {
 
 function renderRecap() {
   const sum = E.summarize(state), goal = E.goalOf(state);
-  const outcomeText = { bought: `You bought ${goal.name.toLowerCase()} with money you had.`, smaller: `You chose ${goal.smaller.name} and kept more of a cushion.`, borrowed: `You bought ${goal.name.toLowerCase()} now and borrowed part of the price.`, waiting: `You are still saving: ${Math.round(sum.goal.progress * 100)}% of the way there.` }[sum.goal.outcome];
+  const outcomeText = { bought: `You bought ${goal.name.toLowerCase()} with money you had.`, smaller: `You chose ${goal.smaller.name} and kept more of a cushion.`, borrowed: `You bought ${goal.name.toLowerCase()} now and borrowed part of the price.`, waiting: sum.goal.progress >= 1 ? 'You have enough for it and chose to keep your full cushion for now.' : `You are still saving: ${Math.round(sum.goal.progress * 100)}% of the way there.` }[sum.goal.outcome];
   const months = sum.cushion.months;
   const debtLines = sum.debt.accounts.map(a => `<li>${esc(a.name)}: ${money(a.balance)} at ${a.apr}% APR. At ${money(a.payment)} a payday: ${Number.isFinite(a.months) ? `${a.months} more ${a.months === 1 ? 'payment' : 'payments'}, about ${money(a.futureInterest)} more interest.` : 'the payment does not cover the interest.'}</li>`).join('');
   const amount = Math.max(10000, state.pot.contributed);
@@ -399,12 +402,12 @@ function renderRecap() {
    ${postcard(sum)}
    <div class="measures">
     <article class="measure"><h3>Your goal</h3><p class="big">${sum.goal.outcome === 'waiting' ? `${Math.round(sum.goal.progress * 100)}%` : '✓'}</p><p>${esc(outcomeText)}</p><div class="bar" aria-hidden="true"><span style="width:${Math.round(sum.goal.progress * 100)}%"></span></div><p class="scale">Scale: $0 to ${money(goal.cost)}</p></article>
-    <article class="measure"><h3>Breathing room</h3><p class="big">${money(sum.cushion.amount)}</p><p>In your jar and wallet: about <strong>${months.toFixed(1)} ${months.toFixed(1) === '1.0' ? 'month' : 'months'}</strong> of needs (${money(E.RULES.needs)} a month). This is what absorbs the next surprise.</p></article>
+    <article class="measure"><h3>Breathing room</h3><p class="big">${money(sum.cushion.amount)}</p><p>In your jar and wallet: about <strong>${months.toFixed(1)} ${months.toFixed(1) === '1.0' ? 'month' : 'months'}</strong> of needs (${money(sum.cushion.needs)} a month). This is what absorbs the next surprise.</p></article>
     <article class="measure"><h3>What you owe</h3><p class="big">${money(sum.debt.owed)}</p><p>Interest and fees added during the game: ${money(sum.debt.interestPaid)}.</p>${debtLines ? `<ul>${debtLines}</ul>` : '<p>Nothing owed. Every future payday is fully yours.</p>'}</article>
-    <article class="measure"><h3>Seed pot</h3><p class="big">${money(sum.pot.value)}</p><p>${sum.pot.contributed ? `You planted ${money(sum.pot.contributed)}${sum.pot.withdrawn ? ` and sold ${money(sum.pot.withdrawn)}` : ''}: ${sum.pot.change >= 0 ? 'a gain' : 'a loss'} of ${money(Math.abs(sum.pot.change))}.` : 'You kept your money in cash. No growth, no drops.'} Your market luck: <strong>${esc(sum.pot.market.name)}</strong> (${esc(sum.pot.market.note)}).</p></article>
+    <article class="measure"><h3>Seed pot</h3><p class="big">${money(sum.pot.value)}</p><p>${sum.pot.contributed ? `You planted ${money(sum.pot.contributed)}${sum.pot.withdrawn ? ` and sold ${money(sum.pot.withdrawn)}` : ''}: ${sum.pot.change >= 0 ? 'a gain' : 'a loss'} of ${money(Math.abs(sum.pot.change))}.` : 'You kept your money in cash. No growth, no drops.'} ${sum.pot.moves.length ? `While it was planted, your best month was <strong>${sum.pot.best > 0 ? '+' : ''}${sum.pot.best}%</strong> and your worst was <strong>${sum.pot.worst}%</strong>. A replay draws new months.` : ''}</p></article>
     <article class="measure"><h3>Good times</h3><p class="big">${sum.stars} ★</p><p>Stars came from fun and rest you chose. They are not points for spending; they are a reminder that money is for living, too.</p></article>
-    <article class="measure"><h3>Next month’s commitments</h3><p class="big">${money(sum.commitments)}</p><p>Subscriptions and loan payments already promised from each future payday, before any new choices.</p></article>
-    <article class="measure luck"><h3>Luck you did not choose</h3><p>Payday 5 brought a broken phone. Payday 8 brought <strong>${esc(sum.luck.name.toLowerCase())}</strong>. Another game could draw different luck. Outcomes come from choices <em>and</em> circumstances.</p></article>
+    <article class="measure"><h3>Next month’s commitments</h3><p class="big">${money(sum.commitments)}</p><p>Subscriptions, price rises, and loan payments already promised from each future payday, before any new choices.</p></article>
+    <article class="measure luck"><h3>Luck you did not choose</h3><ul>${[{ payday: state.schedule.indexOf('emergency') + 1, name: sum.emergency.name, kind: 'emergency' }, ...sum.events.map(e => ({ ...e, kind: e.good ? 'lucky break' : 'surprise cost' }))].sort((a, b) => a.payday - b.payday).map(e => `<li>Payday ${e.payday}: <strong>${esc(e.name)}</strong> (${e.kind})</li>`).join('')}</ul><p>Another game will draw different surprises at different times. Outcomes come from choices <em>and</em> circumstances.</p></article>
    </div>
    <section class="path" aria-labelledby="path-title"><h3 id="path-title">Your path, choice by choice</h3><ol class="path-list">${sum.decisions.map(l => `<li><span class="path-day">Payday ${l.payday}</span><span class="path-choice">${esc(l.choice)}</span><span class="concepts">${l.concepts.map(c => `<span>${esc(E.CONCEPTS[c])}</span>`).join('')}</span></li>`).join('')}</ol>
     <p>Ideas you used: ${sum.concepts.map(c => esc(E.CONCEPTS[c])).join(', ')}.</p></section>

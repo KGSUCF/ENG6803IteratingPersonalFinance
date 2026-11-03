@@ -46,7 +46,7 @@ test('a later snapshot captures changed content while the earlier copy stays int
  const manifest=JSON.parse(await readFile(path.join(fixture,'iterations/iteration-02/snapshot.json'),'utf8'));
  for(const file of ['game/index.html','game/game.js','game/engine.js','game/game.css','game/pocketford.svg'])assert.ok(manifest.files.some(f=>f.path===file),`${file} missing from snapshot`);
  const gameJs=await readFile(path.join(fixture,'iterations/iteration-02/game/game.js'),'utf8');
- assert.ok(gameJs.includes("'money-moves:iteration-02:game:pocketford:v1'"));assert.ok(!gameJs.includes("'money-moves:game:"));
+ assert.ok(gameJs.includes("'money-moves:iteration-02:game:pocketford:v2'"));assert.ok(!gameJs.includes("'money-moves:game:"));
  const firstGame=path.join(fixture,'iterations/iteration-01/game/engine.js'),firstGameBefore=await readFile(firstGame);
  await writeFile(path.join(fixture,'game/engine.js'),(await readFile(path.join(fixture,'game/engine.js'),'utf8')).replace('Ten Paydays','Test-only revised game'));
  const third=run('iteration-03','c'.repeat(40));assert.equal(third.status,0,third.stderr);
