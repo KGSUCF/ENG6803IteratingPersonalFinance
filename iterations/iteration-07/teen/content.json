@@ -1,0 +1,248 @@
+{
+  "id": "teen",
+  "audience": "Teen",
+  "name": "The Money Group Chat",
+  "place": "Your feed. Your plans. Your money.",
+  "minutes": "4–5",
+  "strap": "Your money needs a group chat.",
+  "description": "Get the basics of pay, plans, saving, credit, and suspiciously perfect promises.",
+  "tone": "“Only $9 a month” has entered the chat.",
+  "color": "#d9c5fb",
+  "ink": "#302145",
+  "accent": "#cde66e",
+  "income": 90,
+  "essentials": 35,
+  "fun": 24,
+  "unit": "month",
+  "goal": 120,
+  "buffer": 20,
+  "contribution": 10,
+  "shock": 60,
+  "principal": 120,
+  "payment": 15,
+  "apr": 24,
+  "invest": 500,
+  "years": 5,
+  "rate": 5,
+  "fee": 0,
+  "inflation": 0,
+  "topics": [
+    {
+      "title": "Your paycheck is not your whole story.",
+      "text": "Your money has an arrival side and a departure side. Income can come from work, gifts, or support. Gross pay is what you earn before deductions. Take-home pay is what arrives after deductions, which may include taxes. Expenses are the departures. Track both sides: money can leave with impressive speed and absolutely no farewell speech.",
+      "aside": "You have a fictional $90 to work with this month, after any deductions. We made up the amount to show the idea; it is not a typical paycheck or a tax estimate.",
+      "joke": "Your bank balance does not accept “but I had a really good vibe.”",
+      "prompt": "Switch views to see where $90 can go.",
+      "term": "MONEY IN − MONEY OUT = ROOM TO PLAN",
+      "everyday": "Say you get a part-time job. The hourly rate sounds promising, but your pay statement shows what you actually take home. Transport, food, and other commitments may already have dibs on some of it. Before treating the bank balance as spending money, check what bills are coming. Your balance gives you a number; your plan explains what that number needs to do.",
+      "connection": "Find out what you have available, then give it a plan that fits your life.",
+      "words": [
+        [
+          "Gross pay",
+          "Your earnings before deductions take their share."
+        ],
+        [
+          "Take-home pay",
+          "The pay left after deductions. This is the amount you can plan with."
+        ],
+        [
+          "Cash flow",
+          "Money coming in and going out, including when it happens."
+        ]
+      ],
+      "assumptions": "All money amounts and timing are invented for teaching. This is not a survey of prices, income, or tax rates. The flow view is a single example, not a recommended allocation."
+    },
+    {
+      "title": "Give your goals a line in the budget.",
+      "text": "A budget helps your money support the things you actually care about. Make room for needs, some wants, and saving when you can. Every choice uses money that could do something else. The next-best thing you give up is the opportunity cost. Also, a small monthly charge comes back every month. Apparently it has a key.",
+      "aside": "After $35 for basics, the remaining money can go toward fun and your $120 goal. The timeline assumes you save the same amount each month.",
+      "joke": "A subscription is basically a tiny bill with excellent attendance.",
+      "prompt": "Move the fun budget. Watch the goal date respond.",
+      "term": "A GOOD PLAN MAKES TRADEOFFS VISIBLE",
+      "everyday": "Maybe the concert matters more to you than another streaming service. That gives you a useful choice to consider. Put an amount and a date on the goal so “someday” has something to work with. If the date does not fit the money, try a different spending split, saving pace, or deadline. Build a plan you can actually live with.",
+      "connection": "Saving gets a lot more interesting when you can name what it is for.",
+      "words": [
+        [
+          "Budget",
+          "A plan for what comes in, what goes out, and what waits for later."
+        ],
+        [
+          "Opportunity cost",
+          "The next-best thing you give up when you choose."
+        ],
+        [
+          "Recurring expense",
+          "A cost that keeps returning, such as a monthly subscription."
+        ]
+      ],
+      "assumptions": "Essentials are fixed in this illustration. Flexible spending and saving divide the remaining money. Goal periods = ceiling(goal ÷ saving per period). No interest, price changes, or income changes are modeled."
+    },
+    {
+      "title": "Build a buffer for plot twists.",
+      "text": "Savings can help with a goal you planned and a cost you definitely did not invite. An emergency fund is money you can reach when a surprise turns up. The amount that helps depends on your situation. Even a small cushion can be useful. If income cannot cover needs, ask for support; a better budget cannot invent the missing income.",
+      "aside": "Start with $20 and try adding money for six months. Then reveal a $60 surprise. We have left out interest so you can see what your saving alone does.",
+      "joke": "Life did not put “broken headphones” on the shared calendar.",
+      "prompt": "Try different amounts. Savings are useful when you need them.",
+      "term": "A BUFFER BUYS OPTIONS",
+      "everyday": "A regular bus pass belongs in the plan. An unexpected repair may be a job for the emergency fund. A sale is still a sale, even when the shop uses twelve exclamation marks. Keep surprise money accessible, without relying on an investment rising at the right moment. If money is tight, a trusted adult or local support resource may help you find options.",
+      "connection": "A little cash ready for a surprise can help keep that surprise from turning into costly debt.",
+      "words": [
+        [
+          "Emergency fund",
+          "Savings you can reach when an unexpected cost turns up."
+        ],
+        [
+          "Accessible",
+          "Ready for you to use when you need it."
+        ],
+        [
+          "Shortfall",
+          "The amount still missing when the cost is bigger than the money available."
+        ]
+      ],
+      "assumptions": "Savings = starting cash + contribution × periods. A surprise is subtracted once when switched on. Savings cannot go below zero; the remaining cost is shown separately. No interest, investment returns, insurance payment, or new borrowing is included."
+    },
+    {
+      "title": "Credit is tomorrow’s money, scheduled.",
+      "text": "Credit lets you buy now and send Future You the repayment schedule. Interest is a cost of borrowing; on a credit card, APR gives the yearly interest rate. Fees can add more. Check the total cost and the due dates before agreeing. A tiny payment can keep a purchase in your budget long after you have stopped being excited about it.",
+      "aside": "Try different payments on a pretend $120 balance at 24% APR. There are no new purchases or fees. This simple model adds interest each month before subtracting your payment.",
+      "joke": "“Future Me will handle it” is not a payment method.",
+      "prompt": "Change the payment. Compare time and total interest.",
+      "term": "COMPARE TOTAL COST, NOT JUST THE PAYMENT",
+      "everyday": "A split-payment offer makes each payment look smaller. Add them up before deciding whether the whole deal looks good. Our fictional shop offers four $15 payments: that is $60 in total. The cash price is $50, so the stated plan costs $10 extra. Some real plans charge no interest, but you still need to read their dates, fees, and late-payment terms.",
+      "connection": "Repayments need a place in your later budget, right alongside the things Future You will want and need.",
+      "words": [
+        [
+          "Principal",
+          "The amount you borrowed before adding the borrowing cost."
+        ],
+        [
+          "APR",
+          "Annual percentage rate. On a credit card, it states a yearly interest rate."
+        ],
+        [
+          "Fee",
+          "An extra charge that can be separate from interest."
+        ],
+        [
+          "Compounding",
+          "Growth or interest building on earlier growth or interest."
+        ]
+      ],
+      "assumptions": "Interest = opening balance × APR ÷ 12, then the fixed payment is applied. The last payment may be smaller. No new charges, fees, daily calculation, payment timing variation, or tax effects. The comparison payment is a fictional fixed amount, not a real issuer’s minimum-payment schedule."
+    },
+    {
+      "title": "Growing money is not a guaranteed glow-up.",
+      "text": "Compounding means earlier growth can earn more growth. Time gives that process room to work. Investing can help with long-term goals, but prices can fall. Diversification spreads money across different investments to reduce some risks; it cannot erase every risk. If someone promises high returns with no risk and wants a decision right now, give yourself permission to pause.",
+      "aside": "This curve gives a fictional investment a steady 5% return each year. The switch applies a 20% drop at the end. They are teaching examples, not a peek at the future.",
+      "joke": "A stranger’s “secret guaranteed strategy” is doing a lot of acting.",
+      "prompt": "Move the years. Look at the downside as well as the upside.",
+      "term": "TIME HELPS COMPOUNDING; IT DOES NOT REMOVE RISK",
+      "everyday": "Money for next month’s plans has a different deadline from money you can leave invested for years. Put everything in one company and a lot depends on how that company does. A spread of investments reduces that concentration, though the whole market can still fall. Before handing over money or information, find out how the product works, what it costs, and who is offering it.",
+      "connection": "Ask what you want the money to do, when you will need it, and what could go wrong. The exciting return is only part of the conversation.",
+      "words": [
+        [
+          "Investing",
+          "Putting money to work in the hope of growth, while accepting that you could lose money."
+        ],
+        [
+          "Diversification",
+          "Spreading money across different investments so one holding does not carry the whole plan."
+        ],
+        [
+          "Return",
+          "What an investment gains or loses."
+        ]
+      ],
+      "assumptions": "Nominal ending value = principal × (1 + (gross return − annual fee)/100)^years. Purchasing power divides that value by (1 + inflation/100)^years. Subtracting the fee from annual return is a simplified convention. The optional 20% drop is applied once at the end, to both comparison paths. No taxes, contributions, or changing returns. These are scenarios, not promised outcomes."
+    }
+  ],
+  "recap": [
+    "Use take-home income when planning spending.",
+    "Count recurring costs and protect a goal.",
+    "Keep a buffer when you can.",
+    "Compare borrowing costs and question investing hype."
+  ],
+  "action": [
+    "Check one recurring cost.",
+    "Write down a goal and a date.",
+    "Compare total cost before borrowing."
+  ],
+  "duration": "10–15 min",
+  "artAlt": "A phone showing a money group chat, headphones, and a note from Future Me.",
+  "nextAudience": "College student",
+  "budgetStep": 1,
+  "saveMax": 60,
+  "saveStep": 5,
+  "minPayment": 5,
+  "maxPayment": 60,
+  "payStep": 5,
+  "review": {
+    "title": "The group-chat fact check",
+    "intro": "Five money takes. See which ones deserve a thumbs-up before the group chat declares itself a financial institution.",
+    "summary": [
+      "Income is money coming in; expenses and saving decide where it goes.",
+      "A budget connects your priorities to the money actually available. Every choice has a tradeoff.",
+      "Keep an accessible cushion for surprises, alongside money for planned goals.",
+      "Compare the total cost of borrowing. Interest and small payments can keep debt around longer.",
+      "Compounding takes time, and investing involves risk. A promised return is a reason to ask questions."
+    ],
+    "questions": [
+      {
+        "chapter": 0,
+        "prompt": "Which description best fits income?",
+        "choices": [
+          "Anything you would like to buy",
+          "Only the money left after shopping",
+          "Money coming in, such as pay from a job"
+        ],
+        "answer": 2,
+        "explanation": "Income is money arriving. Expenses are money leaving. A wishlist can be excellent entertainment, but it is not a deposit."
+      },
+      {
+        "chapter": 1,
+        "prompt": "A budget is most useful as…",
+        "choices": [
+          "A ban on having fun",
+          "A plan connecting spending and saving to your priorities",
+          "A prediction that nothing will change"
+        ],
+        "answer": 1,
+        "explanation": "A useful plan makes tradeoffs visible and can be adjusted. Fun can have a place in it; the plan just needs the available money to cover its jobs."
+      },
+      {
+        "chapter": 2,
+        "prompt": "Why keep emergency savings accessible?",
+        "choices": [
+          "A surprise bill may arrive before a long-term investment recovers",
+          "Accessible money never gets spent",
+          "Every surprise costs exactly the same"
+        ],
+        "answer": 0,
+        "explanation": "A cushion can help you respond without selling something at a bad time or immediately borrowing. Its size depends on your situation; surprises do not use a price list."
+      },
+      {
+        "chapter": 3,
+        "prompt": "For the same debt and interest rate, why can a smaller payment cost more overall?",
+        "choices": [
+          "Small payments erase interest",
+          "Interest stops after the first payment",
+          "The balance can stay around earning interest longer"
+        ],
+        "answer": 2,
+        "explanation": "When the payment covers interest and reduces principal only slowly, repayment takes longer and total interest can grow. The debt has discovered an extended-stay package."
+      },
+      {
+        "chapter": 4,
+        "prompt": "A friend says a smooth growth chart proves an investment cannot lose. What is missing?",
+        "choices": [
+          "A brighter line color",
+          "Real returns can change and losses can happen",
+          "A longer caption guarantees the result"
+        ],
+        "answer": 1,
+        "explanation": "The chart shows assumptions, not a guarantee. Time can support compounding, but it cannot remove investment risk. The line has no inside information."
+      }
+    ]
+  }
+}

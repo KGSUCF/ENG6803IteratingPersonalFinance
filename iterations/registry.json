@@ -40,5 +40,12 @@
     "description": "Surprises that stay surprising: shuffled decisions, random emergencies and luck events, and investment changes drawn fresh for every game.",
     "createdAt": "2026-11-03T15:15:03.264Z",
     "sourceCommit": "71237e130a39760b69bb850ea1fa3e7fcccc5241"
+  },
+  {
+    "id": "iteration-07",
+    "label": "Iteration 07",
+    "description": "Corrections from the Version 6 accuracy review, livelier course charts, a clearer block savings chart, and new illustrations in the courses and game.",
+    "createdAt": "2026-11-05T14:23:33.919Z",
+    "sourceCommit": "5fc36bc534a61fd6fcea7bba4d0de5148247e042"
   }
 ]

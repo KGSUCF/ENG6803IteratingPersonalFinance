@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "id": "iteration-07",
+  "label": "Iteration 07",
+  "description": "Corrections from the Version 6 accuracy review, livelier course charts, a clearer block savings chart, and new illustrations in the courses and game.",
+  "createdAt": "2026-11-05T14:23:33.919Z",
+  "sourceCommit": "5fc36bc534a61fd6fcea7bba4d0de5148247e042",
+  "storageNamespace": "money-moves:iteration-07:",
+  "note": "Runtime copied from the source commit. Runtime transformations isolate browser progress and notes for this iteration and route the global archive link to its parent archive page.",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "index.html",
+      "sourceSha256": "56cf03fd39486852f4c7b80d917c1199330853702a881e918f7a5d6d8e9d0c3f",
+      "sha256": "9b95eac0dc6b41c3f1a6de40b536af0793fbb315b77e9edc0c79a86584b49ae3"
+    },
+    {
+      "path": "sources.html",
+      "sourceSha256": "6e91065bfccd10fea3644e8bf1da1c38b27f666b170b7061057ccf9153367aca",
+      "sha256": "6e91065bfccd10fea3644e8bf1da1c38b27f666b170b7061057ccf9153367aca"
+    },
+    {
+      "path": "assets/favicon.svg",
+      "sourceSha256": "2651d6b3915eae3ce5bc6cc4184af118bd4c01fecb58a00d6d6604bb8bf12249",
+      "sha256": "2651d6b3915eae3ce5bc6cc4184af118bd4c01fecb58a00d6d6604bb8bf12249"
+    },
+    {
+      "path": "assets/hub.css",
+      "sourceSha256": "5e8d24eb6b6d4f35e229682f4119ce069bd46100bc0b754e46c1c17284582726",
+      "sha256": "5e8d24eb6b6d4f35e229682f4119ce069bd46100bc0b754e46c1c17284582726"
+    },
+    {
+      "path": "assets/hub.js",
+      "sourceSha256": "ab00fb6efbe9153fcfedf1513edf9cb5f5dbf4f5ae9a4c60d2409d9657b68dfd",
+      "sha256": "9fefae0e42048c2da43be551dc8e97db8835b0d27ed340183cea7e4a545a3a3f"
+    },
+    {
+      "path": "assets/money-map.svg",
+      "sourceSha256": "a02c55a7f755591817a1600d91041c1dc629deb2d252b39c2a3e715e2816fc19",
+      "sha256": "a02c55a7f755591817a1600d91041c1dc629deb2d252b39c2a3e715e2816fc19"
+    },
+    {
+      "path": "child/content.json",
+      "sourceSha256": "19d8eec27e9fe802bd6f693caf99204f83c8ad509cf6888506dea52508c25798",
+      "sha256": "19d8eec27e9fe802bd6f693caf99204f83c8ad509cf6888506dea52508c25798"
+    },
+    {
+      "path": "child/index.html",
+      "sourceSha256": "e6b307cf286a092e7ccfb82a29e48508cd036fac77544373663be26b726e9bcd",
+      "sha256": "e6b307cf286a092e7ccfb82a29e48508cd036fac77544373663be26b726e9bcd"
+    },
+    {
+      "path": "child/lesson.js",
+      "sourceSha256": "0e8540d316104b4221cba95b3af498941061b8daabb3c00a733885e4e4b12628",
+      "sha256": "36bfbc1f9d586394d9cd01337d0fcdf836baf572a1d04cbbdc89576abc91757d"
+    },
+    {
+      "path": "child/model.js",
+      "sourceSha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07",
+      "sha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07"
+    },
+    {
+      "path": "child/quiz.js",
+      "sourceSha256": "813a6ed0f003c3893579a2b874388441b0973c9365dfb45122b95471ab8bdf21",
+      "sha256": "813a6ed0f003c3893579a2b874388441b0973c9365dfb45122b95471ab8bdf21"
+    },
+    {
+      "path": "child/scene.svg",
+      "sourceSha256": "e2ec03aea93ad1ff1e315f94bc221738c6f1a80062b81d1f625d774dc58bc912",
+      "sha256": "e2ec03aea93ad1ff1e315f94bc221738c6f1a80062b81d1f625d774dc58bc912"
+    },
+    {
+      "path": "child/style.css",
+      "sourceSha256": "c61fe772ff9b5df370c56aaebc3156ff1b7c45fad5b96f6df6df328266ea505b",
+      "sha256": "c61fe772ff9b5df370c56aaebc3156ff1b7c45fad5b96f6df6df328266ea505b"
+    },
+    {
+      "path": "teen/content.json",
+      "sourceSha256": "fafb69800afcb7ed74e3a36aeb882cb508f8acaf83f6e16e966a4ecbc3fa05b0",
+      "sha256": "fafb69800afcb7ed74e3a36aeb882cb508f8acaf83f6e16e966a4ecbc3fa05b0"
+    },
+    {
+      "path": "teen/index.html",
+      "sourceSha256": "3650a2b034eddf88dfd3a8a0d363836a4353d3b27887ca7b9b0b9d3e87ae5a0d",
+      "sha256": "3650a2b034eddf88dfd3a8a0d363836a4353d3b27887ca7b9b0b9d3e87ae5a0d"
+    },
+    {
+      "path": "teen/lesson.js",
+      "sourceSha256": "0e8540d316104b4221cba95b3af498941061b8daabb3c00a733885e4e4b12628",
+      "sha256": "36bfbc1f9d586394d9cd01337d0fcdf836baf572a1d04cbbdc89576abc91757d"
+    },
+    {
+      "path": "teen/model.js",
+      "sourceSha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07",
+      "sha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07"
+    },
+    {
+      "path": "teen/quiz.js",
+      "sourceSha256": "813a6ed0f003c3893579a2b874388441b0973c9365dfb45122b95471ab8bdf21",
+      "sha256": "813a6ed0f003c3893579a2b874388441b0973c9365dfb45122b95471ab8bdf21"
+    },
+    {
+      "path": "teen/scene.svg",
+      "sourceSha256": "c4c7c7458e3bddbf09ea8dd19ed7767174eb99e176c4f74c80a763e116c20c5d",
+      "sha256": "c4c7c7458e3bddbf09ea8dd19ed7767174eb99e176c4f74c80a763e116c20c5d"
+    },
+    {
+      "path": "teen/style.css",
+      "sourceSha256": "c61fe772ff9b5df370c56aaebc3156ff1b7c45fad5b96f6df6df328266ea505b",
+      "sha256": "c61fe772ff9b5df370c56aaebc3156ff1b7c45fad5b96f6df6df328266ea505b"
+    },
+    {
+      "path": "college/content.json",
+      "sourceSha256": "dd869d97e1f88a3b6c29f0696e24f90f4c368a359b9097ef3669d985330748d0",
+      "sha256": "dd869d97e1f88a3b6c29f0696e24f90f4c368a359b9097ef3669d985330748d0"
+    },
+    {
+      "path": "college/index.html",
+      "sourceSha256": "d327547f82eda58b089e167e217064fcfd0590185c4164f7bd0c1876364ba32d",
+      "sha256": "d327547f82eda58b089e167e217064fcfd0590185c4164f7bd0c1876364ba32d"
+    },
+    {
+      "path": "college/lesson.js",
+      "sourceSha256": "0e8540d316104b4221cba95b3af498941061b8daabb3c00a733885e4e4b12628",
+      "sha256": "36bfbc1f9d586394d9cd01337d0fcdf836baf572a1d04cbbdc89576abc91757d"
+    },
+    {
+      "path": "college/model.js",
+      "sourceSha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07",
+      "sha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07"
+    },
+    {
+      "path": "college/quiz.js",
+      "sourceSha256": "813a6ed0f003c3893579a2b874388441b0973c9365dfb45122b95471ab8bdf21",
+      "sha256": "813a6ed0f003c3893579a2b874388441b0973c9365dfb45122b95471ab8bdf21"
+    },
+    {
+      "path": "college/scene.svg",
+      "sourceSha256": "3ab00f589eae04072e082fdea5a4509051031c5da345c5ad4fbf2aeec7e73fdf",
+      "sha256": "3ab00f589eae04072e082fdea5a4509051031c5da345c5ad4fbf2aeec7e73fdf"
+    },
+    {
+      "path": "college/style.css",
+      "sourceSha256": "c61fe772ff9b5df370c56aaebc3156ff1b7c45fad5b96f6df6df328266ea505b",
+      "sha256": "c61fe772ff9b5df370c56aaebc3156ff1b7c45fad5b96f6df6df328266ea505b"
+    },
+    {
+      "path": "post-college/content.json",
+      "sourceSha256": "97d90742011a0b54392f75b879026ecbbea1b041d1c4f6f4411905a859f288b1",
+      "sha256": "97d90742011a0b54392f75b879026ecbbea1b041d1c4f6f4411905a859f288b1"
+    },
+    {
+      "path": "post-college/index.html",
+      "sourceSha256": "8976b7caac2160ef9427654a6b05f1ce3dba3196401f579e1ec66c5f2891eb70",
+      "sha256": "8976b7caac2160ef9427654a6b05f1ce3dba3196401f579e1ec66c5f2891eb70"
+    },
+    {
+      "path": "post-college/lesson.js",
+      "sourceSha256": "0e8540d316104b4221cba95b3af498941061b8daabb3c00a733885e4e4b12628",
+      "sha256": "36bfbc1f9d586394d9cd01337d0fcdf836baf572a1d04cbbdc89576abc91757d"
+    },
+    {
+      "path": "post-college/model.js",
+      "sourceSha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07",
+      "sha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07"
+    },
+    {
+      "path": "post-college/quiz.js",
+      "sourceSha256": "813a6ed0f003c3893579a2b874388441b0973c9365dfb45122b95471ab8bdf21",
+      "sha256": "813a6ed0f003c3893579a2b874388441b0973c9365dfb45122b95471ab8bdf21"
+    },
+    {
+      "path": "post-college/scene.svg",
+      "sourceSha256": "141b48cab814661e1ebf590ac2f5af65b449a8913d2888a000d1ecfff85ed21e",
+      "sha256": "141b48cab814661e1ebf590ac2f5af65b449a8913d2888a000d1ecfff85ed21e"
+    },
+    {
+      "path": "post-college/style.css",
+      "sourceSha256": "c61fe772ff9b5df370c56aaebc3156ff1b7c45fad5b96f6df6df328266ea505b",
+      "sha256": "c61fe772ff9b5df370c56aaebc3156ff1b7c45fad5b96f6df6df328266ea505b"
+    },
+    {
+      "path": "expert/content.json",
+      "sourceSha256": "966be3f23c9f0b2dad12555bab20b6e303f4bdc30baafe7442e2674b4492608d",
+      "sha256": "966be3f23c9f0b2dad12555bab20b6e303f4bdc30baafe7442e2674b4492608d"
+    },
+    {
+      "path": "expert/index.html",
+      "sourceSha256": "9bd318c53371ab9d2343cdd10390a74b2f291c79bc5396d646c9105e8999ee17",
+      "sha256": "9bd318c53371ab9d2343cdd10390a74b2f291c79bc5396d646c9105e8999ee17"
+    },
+    {
+      "path": "expert/lesson.js",
+      "sourceSha256": "0e8540d316104b4221cba95b3af498941061b8daabb3c00a733885e4e4b12628",
+      "sha256": "36bfbc1f9d586394d9cd01337d0fcdf836baf572a1d04cbbdc89576abc91757d"
+    },
+    {
+      "path": "expert/model.js",
+      "sourceSha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07",
+      "sha256": "7134058ff54d91f1c8d433e7c946afb8d3724a675c91dc0b5870bf70108e8e07"
+    },
+    {
+      "path": "expert/quiz.js",
+      "sourceSha256": "813a6ed0f003c3893579a2b874388441b0973c9365dfb45122b95471ab8bdf21",
+      "sha256": "813a6ed0f003c3893579a2b874388441b0973c9365dfb45122b95471ab8bdf21"
+    },
+    {
+      "path": "expert/scene.svg",
+      "sourceSha256": "65b0a769e6b1005d127bbf2326dc4520b7610532cceec832ef27ac224131c97c",
+      "sha256": "65b0a769e6b1005d127bbf2326dc4520b7610532cceec832ef27ac224131c97c"
+    },
+    {
+      "path": "expert/style.css",
+      "sourceSha256": "c61fe772ff9b5df370c56aaebc3156ff1b7c45fad5b96f6df6df328266ea505b",
+      "sha256": "c61fe772ff9b5df370c56aaebc3156ff1b7c45fad5b96f6df6df328266ea505b"
+    },
+    {
+      "path": "game/engine.js",
+      "sourceSha256": "87b49e020469c0e3eb5db5e12a5044936568f84d78d1c96e9b7ebb488a7d68aa",
+      "sha256": "87b49e020469c0e3eb5db5e12a5044936568f84d78d1c96e9b7ebb488a7d68aa"
+    },
+    {
+      "path": "game/game.css",
+      "sourceSha256": "39db6d13fb22b71ce9058fcd40cff9314c686e8a4ebba2b25979303d84a55d45",
+      "sha256": "39db6d13fb22b71ce9058fcd40cff9314c686e8a4ebba2b25979303d84a55d45"
+    },
+    {
+      "path": "game/game.js",
+      "sourceSha256": "a34089dc811359d813c8c7e81b2e2a24af9be49e0b8a9ffe387a37ac448d191d",
+      "sha256": "0be3b5f1aca91ec20ba1507e7cc5cbdb17ed3f0975546afd8d58960fee6533f7"
+    },
+    {
+      "path": "game/index.html",
+      "sourceSha256": "0404b00d67645a7bf4712a99139f3857a36c067c30172b7b00ed27b1ad7cf344",
+      "sha256": "0404b00d67645a7bf4712a99139f3857a36c067c30172b7b00ed27b1ad7cf344"
+    },
+    {
+      "path": "game/pocketford.svg",
+      "sourceSha256": "2603522de275f13bb45981820a8b65bacd5f8b533287e32e94b3b6be773e3610",
+      "sha256": "2603522de275f13bb45981820a8b65bacd5f8b533287e32e94b3b6be773e3610"
+    }
+  ]
+}

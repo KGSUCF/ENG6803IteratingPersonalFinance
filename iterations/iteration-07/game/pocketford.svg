@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420">
+  <title>Pocketford</title>
+  <rect width="640" height="420" fill="#bfe0e8"/>
+  <circle cx="548" cy="72" r="38" fill="#eeb775"/>
+  <path d="M60 70q14-14 30 0 16-10 26 6H50q0-8 10-6zM380 50q12-12 26 0 14-8 22 6h-58q0-8 10-6z" fill="#fffdf6"/>
+  <path d="M0 230q120-70 250-30t240-20 150 10v230H0z" fill="#b9cd71"/>
+  <path d="M0 300q160-40 330-10t310-10v140H0z" fill="#8fb069"/>
+  <!-- road -->
+  <path d="M0 330h640v40H0z" fill="#d9d2bd"/>
+  <path d="M20 350h40M100 350h40M180 350h40M260 350h40M340 350h40M420 350h40M500 350h40M580 350h40" stroke="#fffdf6" stroke-width="4"/>
+  <!-- apartment -->
+  <g transform="translate(36 150)">
+    <rect width="120" height="180" fill="#e9d6b8" stroke="#233d35" stroke-width="3"/>
+    <rect x="-6" y="-10" width="132" height="14" fill="#8f4a26" stroke="#233d35" stroke-width="3"/>
+    <g fill="#fffdf6" stroke="#233d35" stroke-width="2.5"><rect x="16" y="22" width="30" height="30"/><rect x="74" y="22" width="30" height="30"/><rect x="16" y="76" width="30" height="30"/><rect x="74" y="76" width="30" height="30"/></g>
+    <path d="M74 76h30v30H74z" fill="#eeb775"/>
+    <circle cx="89" cy="92" r="7" fill="#8d8a86"/><path d="M82 90h14" stroke="#233d35" stroke-width="4"/>
+    <rect x="46" y="128" width="28" height="52" fill="#233d35"/>
+    <text x="60" y="122" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#233d35">APTS</text>
+  </g>
+  <!-- bakery -->
+  <g transform="translate(200 170)">
+    <rect width="150" height="160" fill="#fffdf6" stroke="#233d35" stroke-width="3"/>
+    <path d="M-8 0 75-56 158 0z" fill="#a65e35" stroke="#233d35" stroke-width="3"/>
+    <path d="M0 40h150v24H0z" fill="#d3e38b" stroke="#233d35" stroke-width="3"/>
+    <path d="M0 40l15 24 15-24 15 24 15-24 15 24 15-24 15 24 15-24 15 24 15-24" fill="none" stroke="#233d35" stroke-width="2"/>
+    <text x="75" y="28" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#233d35">Bakery</text>
+    <rect x="16" y="78" width="64" height="48" fill="#bfe0e8" stroke="#233d35" stroke-width="2.5"/>
+    <path d="M26 112q12-14 24 0zM54 112q10-12 20 0z" fill="#eeb775" stroke="#233d35" stroke-width="2"/>
+    <rect x="96" y="84" width="38" height="76" fill="#233d35"/>
+    <circle cx="126" cy="122" r="3" fill="#d3e38b"/>
+  </g>
+  <!-- bike co-op -->
+  <g transform="translate(392 196)">
+    <rect width="130" height="134" fill="#3b5d50" stroke="#233d35" stroke-width="3"/>
+    <rect x="-6" y="-14" width="142" height="18" fill="#eeb775" stroke="#233d35" stroke-width="3"/>
+    <text x="65" y="-1" text-anchor="middle" font-family="monospace" font-size="11" font-weight="700" fill="#233d35">BIKE CO-OP</text>
+    <rect x="16" y="22" width="98" height="70" fill="#fffdf6" stroke="#233d35" stroke-width="2.5"/>
+    <circle cx="44" cy="68" r="14" fill="none" stroke="#233d35" stroke-width="3"/><circle cx="86" cy="68" r="14" fill="none" stroke="#233d35" stroke-width="3"/>
+    <path d="M44 68l14-22h20l8 22M58 46l12 22H44" fill="none" stroke="#a65e35" stroke-width="3"/>
+    <rect x="50" y="100" width="30" height="34" fill="#233d35"/>
+  </g>
+  <!-- tree -->
+  <g transform="translate(560 220)"><rect x="-6" y="40" width="12" height="70" fill="#7a5034"/><circle r="44" cy="20" fill="#6f8f4e" stroke="#233d35" stroke-width="3"/><circle cx="-14" cy="8" r="5" fill="#eeb775"/><circle cx="16" cy="26" r="5" fill="#eeb775"/></g>
+  <!-- bench with the cast -->
+  <g transform="translate(250 360)">
+    <rect x="0" y="16" width="170" height="10" fill="#8f4a26" stroke="#233d35" stroke-width="2.5"/>
+    <path d="M14 26v26M156 26v26" stroke="#233d35" stroke-width="5"/>
+    <!-- tortoise -->
+    <g transform="translate(18 -24)"><ellipse cx="22" cy="30" rx="24" ry="14" fill="#6f8f4e" stroke="#233d35" stroke-width="2.5"/><circle cx="48" cy="18" r="11" fill="#a9c47f" stroke="#233d35" stroke-width="2.5"/><circle cx="51" cy="16" r="3.5" fill="#fff" stroke="#233d35" stroke-width="1.5"/><circle cx="51.5" cy="16.5" r="1.5" fill="#233d35"/></g>
+    <!-- raccoon -->
+    <g transform="translate(78 -34)"><ellipse cx="18" cy="38" rx="15" ry="16" fill="#8d8a86" stroke="#233d35" stroke-width="2.5"/><circle cx="18" cy="14" r="14" fill="#8d8a86" stroke="#233d35" stroke-width="2.5"/><path d="M6 12q6-5 12-1 6-4 12 1-6 5-12 2-6 3-12-2z" fill="#233d35"/><circle cx="12" cy="12" r="2.5" fill="#fff"/><circle cx="24" cy="12" r="2.5" fill="#fff"/><path d="M6 2 8-8l6 6M30 2l-2-10-6 6" fill="#8d8a86" stroke="#233d35" stroke-width="2"/><path d="M30 46q16 4 12-12" stroke="#233d35" stroke-width="6" fill="none"/></g>
+    <!-- badger -->
+    <g transform="translate(122 -30)"><ellipse cx="18" cy="36" rx="15" ry="14" fill="#3b3b3b" stroke="#233d35" stroke-width="2.5"/><circle cx="18" cy="14" r="13" fill="#3b3b3b" stroke="#233d35" stroke-width="2.5"/><path d="M18 2c-3 0-4 5-4 12s2 12 4 12 4-4 4-12-1-12-4-12z" fill="#f7f4e9"/><circle cx="11" cy="13" r="2" fill="#fff"/><circle cx="25" cy="13" r="2" fill="#fff"/><path d="M4 30h28" stroke="#eeb775" stroke-width="4" stroke-linecap="round"/></g>
+  </g>
+  <!-- coins rolling between places -->
+  <g fill="#eeb775" stroke="#233d35" stroke-width="2"><circle cx="176" cy="318" r="8"/><circle cx="372" cy="318" r="8"/></g>
+  <text x="176" y="322" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#233d35">$</text>
+  <text x="372" y="322" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#233d35">$</text>
+</svg>
