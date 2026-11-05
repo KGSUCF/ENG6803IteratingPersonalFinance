@@ -230,3 +230,18 @@ test('game: storage key is game-specific and cannot collide with course progress
  for(const k of keys)assert.ok(!/^money-moves:v1:(child|teen|college|post-college|expert)$/.test(k));
  assert.ok(!ui.includes('localStorage.clear'),'the game must never clear other Money Moves data');
 });
+
+test('game: interest shown for new borrowing excludes interest already owed on an existing balance',()=>{
+ const late=['habit','streaming','birthday','invest','emergency','gig','checkin','spare','shifts','goal'];
+ let s=g.chooseGoal(g.newGame({...FIXED,schedule:late}),'keyboard');s=g.startPayday(s);
+ const pick={habit:'save-0',streaming:'bundle',birthday:'concert',invest:'none',emergency:'card',gig:'skip',checkin:'pass',spare:'treat',shifts:'rest'};
+ while(s.payday<10||s.phase!=='decision'){if(s.phase==='decision'){const d=g.currentDecision(s);s=g.choose(s,(d.options.find(o=>o.id===pick[d.id]&&!o.disabled)||d.options.find(o=>!o.disabled)).id);}else if(s.phase==='shortfall')s=g.resolveShortfall(s,'card');else s=g.advance(s);}
+ const existing=s.debts.find(d=>d.id==='card').balance;assert.ok(existing>0);
+ const c=g.currentDecision(s).options.find(o=>o.id==='card');
+ const extra=g.repaymentPlan('card',existing+c.gap).interest-g.repaymentPlan('card',existing).interest;
+ assert.equal(c.terms.extraInterest,extra);assert.ok(extra<c.terms.interest);
+ assert.ok(c.detail.includes(g.money(extra)));assert.ok(!c.detail.includes(g.money(c.terms.interest)));
+ const r=g.choose(s,'card');assert.ok(r.result.why.includes(g.money(extra)));
+ // With nothing owed beforehand, the extra interest is the whole interest.
+ const fresh=g.loanTerms(g.chooseGoal(g.newGame(FIXED),'bike'),'kiosk',24000);assert.equal(fresh.extraInterest,fresh.interest);
+});

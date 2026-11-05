@@ -134,9 +134,11 @@ export function repaymentPlan(loanId, balance, payment = LOANS[loanId].payment) 
 export function loanTerms(s, loanId, amount) {
   const t = LOANS[loanId], existing = debt(s, loanId)?.balance || 0;
   const plan = repaymentPlan(loanId, existing + amount);
+  // Interest caused by this new borrowing alone: the whole balance's interest minus what the existing balance would cost anyway.
+  const extraInterest = plan.interest - repaymentPlan(loanId, existing).interest;
   return {
     name: t.name, apr: t.apr, monthlyRate: t.monthlyBp / 100, amount, existing, balance: existing + amount,
-    payment: t.payment, kind: t.kind, months: plan.months, interest: plan.interest, total: plan.total,
+    payment: t.payment, kind: t.kind, months: plan.months, interest: plan.interest, extraInterest, total: plan.total,
     paydaysLeft: RULES.paydays - s.payday, withinLimit: loanId !== 'card' || existing + amount <= RULES.cardLimit
   };
 }
@@ -392,8 +394,8 @@ const DECISIONS = {
         options.push(p);
       }
       const kiosk = loanTerms(s, 'kiosk', cost), card = loanTerms(s, 'card', cost);
-      options.push(option('kiosk', 'Borrow from the Lending Kiosk', `${money(cost)} at 24% APR. ${money(kiosk.payment)} every payday for ${plural(kiosk.months, 'payday')}.`, { cost, terms: kiosk }));
-      const c = option('card', 'Put it on the Sparrow Store Card', `${money(cost)} at 30% APR. Minimum ${money(card.payment)} each payday: about ${plural(card.months, 'payday')} to repay.`, { cost, terms: card });
+      options.push(option('kiosk', 'Borrow from the Lending Kiosk', `${money(cost)} at 24% APR. ${money(kiosk.payment)} every payday for ${plural(kiosk.months, 'payday')}${kiosk.existing ? `, including the ${money(kiosk.existing)} you already owe there` : ''}. About ${money(kiosk.extraInterest)} interest on this new amount.`, { cost, terms: kiosk }));
+      const c = option('card', 'Put it on the Sparrow Store Card', `${money(cost)} at 30% APR. Minimum ${money(card.payment)} each payday: about ${plural(card.months, 'payday')} to repay${card.existing ? ` the whole card, including the ${money(card.existing)} already on it` : ''}. About ${money(card.extraInterest)} interest on this new amount.`, { cost, terms: card });
       if (!card.withinLimit) { c.disabled = true; c.reason = `The card limit is ${money(RULES.cardLimit)}.`; }
       options.push(c);
       if (e.id === 'phone') { const missed = Math.min(2, left); options.push(option('flip', 'Use Grandpa Ozzie’s old flip phone', `Free, but you miss shift-swap messages: ${money(RULES.missedShiftLoss)} less pay on each of the next ${plural(missed, 'payday')}.`, { cost: 0, missed })); }
@@ -419,8 +421,8 @@ const DECISIONS = {
       const texts = {
         own: ['This is what an emergency reserve is for: a surprise cost became an inconvenience instead of a debt.', 'Your cushion and goal progress shrank, but nothing is owed and future paydays are untouched.'],
         pot: ['Investments can cover emergencies, but you sell at whatever the price is that day, high or low.', 'You kept your jar but gave up any future growth (or recovery) on the part you sold.'],
-        kiosk: [`Borrowing solved it today. Repaying costs about ${money(plan?.interest || 0)} in interest, and the payments come out of each future payday.`, 'You kept your savings but committed future money. Less flexibility if another surprise arrives.'],
-        card: [`Borrowing solved it today. At minimum payments, repaying costs about ${money(plan?.interest || 0)} in interest and takes many paydays.`, 'You kept your savings but committed future money. Less flexibility if another surprise arrives.'],
+        kiosk: [`Borrowing solved it today. This new amount adds about ${money(plan?.extraInterest || 0)} in interest, and the payments come out of each future payday.`, 'You kept your savings but committed future money. Less flexibility if another surprise arrives.'],
+        card: [`Borrowing solved it today. At minimum payments, this new amount adds about ${money(plan?.extraInterest || 0)} in interest and keeps the card balance around for many paydays.`, 'You kept your savings but committed future money. Less flexibility if another surprise arrives.'],
         clinic: ['A no-interest payment plan spreads the cost without making it bigger. Some providers offer one; it is worth asking.', 'Nothing extra is charged, but the payments still come first every payday until it is repaid.'],
         flip: ['You avoided paying anything now, but the cost showed up another way: lower pay. Not everyone has a spare phone to borrow; circumstances shape options.', `About ${money(RULES.missedShiftLoss * (o.missed || 0))} less income, and a phone from 2009.`],
         glue: ['A cheap fix can work, or it can fail and cost more in the end. You took a risk to keep money now.', 'You saved $100 today if the glue holds. If it does not, you pay for the glue and the shoes.']
@@ -564,10 +566,10 @@ const DECISIONS = {
         const gap = goal.cost - have;
         if (s.pot.value > 0 && s.pot.value >= gap) options.push(option('pot', `Sell ${money(gap)} of the seed pot and buy it now`, `★★★ The pot is worth ${money(s.pot.value)}. Uses all of the jar and wallet too.`, { stars: 3, gap }));
         const card = loanTerms(s, 'card', gap), kiosk = loanTerms(s, 'kiosk', gap);
-        const c = option('card', `Buy now, put the ${money(gap)} gap on the Sparrow Card`, `★★★ Uses all of your jar and wallet. 30% APR; ${money(card.payment)} minimum: about ${plural(card.months, 'month')} and ${money(card.interest)} interest to repay.`, { stars: 3, gap, terms: card });
+        const c = option('card', `Buy now, put the ${money(gap)} gap on the Sparrow Card`, `★★★ Uses all of your jar and wallet. 30% APR; ${money(card.payment)} minimum: about ${plural(card.months, 'month')} to repay ${card.existing ? `the whole card (including the ${money(card.existing)} already on it)` : 'it'}, and about ${money(card.extraInterest)} interest on the gap.`, { stars: 3, gap, terms: card });
         if (!card.withinLimit) { c.disabled = true; c.reason = `This would go over the ${money(RULES.cardLimit)} card limit.`; }
         options.push(c);
-        options.push(option('kiosk', `Buy now, borrow the ${money(gap)} gap from the Lending Kiosk`, `★★★ Uses all of your jar and wallet. 24% APR; ${money(kiosk.payment)} a month for ${plural(kiosk.months, 'month')}, ${money(kiosk.interest)} interest.`, { stars: 3, gap, terms: kiosk }));
+        options.push(option('kiosk', `Buy now, borrow the ${money(gap)} gap from the Lending Kiosk`, `★★★ Uses all of your jar and wallet. 24% APR; ${money(kiosk.payment)} a month for ${plural(kiosk.months, 'month')}${kiosk.existing ? ` (including the ${money(kiosk.existing)} you already owe there)` : ''}, and about ${money(kiosk.extraInterest)} interest on the gap.`, { stars: 3, gap, terms: kiosk }));
       }
       const left = Math.max(0, goal.cost - have);
       options.push(option('wait', 'Wait and keep saving', left ? (s.autoSave ? `About ${plural(Math.ceil(left / s.autoSave), 'more payday')} at your ${money(s.autoSave)} saving habit, if nothing else changes.` : 'With no automatic saving, there is no date yet; leftovers could still get you there.') : 'You could buy it now, but you choose to keep the full cushion for a while.', { stars: 0 }));
@@ -593,8 +595,8 @@ const DECISIONS = {
         buy: [`You reached your goal with money you had saved. ${money(cushion)} remains as a cushion.`, cushion < RULES.needs ? 'Your cushion is now smaller than one payday of needs, so the next surprise could be harder.' : 'You enjoyed the goal and kept some room for surprises.'],
         smaller: ['You adjusted the goal to fit your resources. Changing a goal is planning, not failing.', 'You gave up some of what you wanted for a larger cushion.'],
         pot: ['You used an investment for a short-term goal. That works when the value is up; it hurts if the value is down.', 'Your pot is smaller, so less money can grow later.'],
-        card: [`You have your goal today. The ${money(o.gap)} gap will cost about ${money(o.terms?.interest || 0)} in interest at minimum payments.`, 'Borrowing pulls a future purchase into the present. Your future paydays will carry the payments.'],
-        kiosk: [`You have your goal today. The ${money(o.gap)} gap will cost about ${money(o.terms?.interest || 0)} in interest.`, 'A fixed payment plan ends sooner than card minimums, but the payments come first every payday.'],
+        card: [`You have your goal today. The ${money(o.gap)} gap adds about ${money(o.terms?.extraInterest || 0)} in interest at minimum payments.`, 'Borrowing pulls a future purchase into the present. Your future paydays will carry the payments.'],
+        kiosk: [`You have your goal today. The ${money(o.gap)} gap adds about ${money(o.terms?.extraInterest || 0)} in interest.`, 'A fixed payment plan ends sooner than card minimums, but the payments come first every payday.'],
         wait: ['Waiting keeps your cushion and avoids interest.', 'You delay the enjoyment. Sometimes that is the right price; sometimes the moment matters more.']
       }[o.id];
       return { why: texts[0], tradeoff: texts[1], closer: 'There is no single right answer. It depends on how much the goal matters now, how secure your cushion is, and what borrowing would cost.' };

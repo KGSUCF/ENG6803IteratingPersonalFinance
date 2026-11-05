@@ -291,9 +291,10 @@ function termsHTML(t) {
   <div><dt>Borrowing</dt><dd>${money(t.amount)}${t.existing ? ` (added to the ${money(t.existing)} you already owe here: ${money(t.balance)})` : ''}</dd></div>
   <div><dt>Interest rate</dt><dd>${t.apr}% APR, added as ${t.monthlyRate}% of what you owe each payday</dd></div>
   <div><dt>${t.kind === 'card' ? 'Minimum payment' : 'Payment'}</dt><dd>${money(t.payment)} each payday, taken out before saving or spending</dd></div>
-  <div><dt>Time to repay</dt><dd>${t.months} paydays${t.kind === 'card' ? ' if you pay only the minimum' : ''}</dd></div>
-  <div><dt>Interest in total</dt><dd>${money(t.interest)}</dd></div>
-  <div><dt>Total repaid</dt><dd>${money(t.total)}</dd></div></dl>
+  <div><dt>Time to repay</dt><dd>${t.months} paydays${t.existing ? ' for the whole balance' : ''}${t.kind === 'card' ? ' if you pay only the minimum' : ''}</dd></div>
+  <div><dt>Interest in total</dt><dd>${money(t.interest)}${t.existing ? ' on the whole balance' : ''}</dd></div>${t.existing ? `
+  <div><dt>Interest added by this borrowing</dt><dd>${money(t.extraInterest)}</dd></div>` : ''}
+  <div><dt>Total repaid</dt><dd>${money(t.total)}${t.existing ? ' for the whole balance' : ''}</dd></div></dl>
   <p>${t.paydaysLeft > 0 ? `${within} of those payments fall within this game’s ${t.paydaysLeft} remaining ${t.paydaysLeft === 1 ? 'payday' : 'paydays'}.${t.months > t.paydaysLeft ? ' The rest continue after the game ends and appear in your recap.' : ''}` : 'Every payment falls after the game ends; your recap shows them.'} Paying more than the ${t.kind === 'card' ? 'minimum' : 'payment'} would cost less interest.</p></details>`;
 }
 
