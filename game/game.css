@@ -216,3 +216,21 @@ summary{cursor:pointer;font-weight:700;min-height:44px;display:flex;align-items:
 }
 @media (max-width:380px){.meters{grid-template-columns:1fr 1fr}.meter .amount{font-size:19px}.flow-end{font-size:11px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+/* Version 7: event art, crew farewell, confetti */
+.event-art{float:right;margin:0 0 8px 14px}
+.event-icon{display:block;filter:drop-shadow(2px 3px 0 #233d3520)}
+.card.event .event-icon{animation:wobble .6s ease-in-out 2}
+@keyframes wobble{25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+.callout{overflow:hidden}.callout-art{float:right;margin:-4px 0 0 10px}
+.callout.luck .event-icon{animation:popin .5s ease-out both}
+@keyframes popin{from{transform:scale(.3);opacity:0}70%{transform:scale(1.1)}to{transform:scale(1);opacity:1}}
+.cast-wave{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 20px}
+.cast-wave figure{margin:0;display:flex;gap:10px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.cast-wave .portrait{animation:wave 1.2s ease-in-out 3;transform-origin:50% 90%}.cast-wave figure:nth-child(2) .portrait{animation-delay:.3s}.cast-wave figure:nth-child(3) .portrait{animation-delay:.6s}
+@keyframes wave{25%{transform:rotate(-10deg)}75%{transform:rotate(10deg)}}
+.cast-wave figcaption{font-size:14px;line-height:1.4}.cast-wave strong{display:block}
+.recap{position:relative}
+.confetti{position:absolute;inset:0 0 auto 0;height:420px;pointer-events:none;overflow:hidden}
+.confetti i{position:absolute;top:-20px;width:9px;height:14px;border-radius:2px;opacity:0;animation:confetti 2.6s ease-in 2}
+@keyframes confetti{0%{transform:translateY(0) rotate(0);opacity:1}100%{transform:translateY(440px) rotate(540deg);opacity:0}}
+@media (max-width:720px){.cast-wave{grid-template-columns:1fr}.event-art .event-icon{width:72px;height:65px}}

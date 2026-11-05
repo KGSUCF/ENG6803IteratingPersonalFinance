@@ -35,6 +35,10 @@ Karen asked for a check that the Version 6 teaching materials are correct and co
 - **Investor.gov link on `sources.html`:** the "How Fees and Expenses Affect Your Investment Portfolio" link ends in `/investor-bulletins/updated`, which looks truncated. This environment cannot reach investor.gov (or the other cited government sites), so none of the source links could be tested and no replacement address was guessed.
 - **Course saving illustration:** the comparison bars in the saving chapter rescale as the monthly amount changes. The printed amounts are correct; only the bar lengths shift between settings.
 
+## Follow-up (Version 7)
+
+Karen pointed out that the post-college comment is technically accurate: it promises fewer *unpleasant* surprises, not fewer surprises. She chose to replace it with “An emergency fund can change surprises from catastrophic to just annoying.” She noted that the Investor.gov address already on the page is probably the intended one, so the link was left unchanged. It still has not been opened from this environment. Version 7 also redesigned the saving chapter's bars. See `docs/iteration-07.md`.
+
 ## Verification
 
 - `npm test`: 54 checks pass, including the new interest regression test and the unchanged integrity checks for Iterations 01–06.

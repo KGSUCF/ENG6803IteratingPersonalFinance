@@ -21,6 +21,7 @@ Money Moves teaches connected concepts through explanations, everyday examples, 
 - **Fixed Iteration 04:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-04/
 - **Fixed Iteration 05:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-05/
 - **Fixed Iteration 06:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-06/
+- **Fixed Iteration 07:** https://kgsucf.github.io/ENG6803IteratingPersonalFinance/iterations/iteration-07/
 
 Each saved iteration has its own complete runtime files and browser-storage namespace. Future edits to the root app do not change those files or overwrite the saved version’s progress. Use a numbered iteration URL when citing the assignment. `AGENTS.md` records the rule that previously saved iterations must stay unchanged; `npm test` checks their recorded file hashes.
 
@@ -84,7 +85,7 @@ Each course uses a separate `money-moves:v1:<folder>` local-storage key. Stored 
 
 ## Assignment record
 
-`docs/iteration-01.md` records the delivered baseline, requirements, and checks. `docs/iteration-02.md` records the requested friendlier teaching voice and its verification. `docs/iteration-04.md` records the optional summaries and knowledge checks. `docs/iteration-05.md` records the money-choice game, its assumptions, and its verification. `docs/iteration-06.md` records the randomized events and investment changes. Proposed improvements are intentionally left to Karen; no AI-generated improvement list or user-testing results have been added.
+`docs/iteration-01.md` records the delivered baseline, requirements, and checks. `docs/iteration-02.md` records the requested friendlier teaching voice and its verification. `docs/iteration-04.md` records the optional summaries and knowledge checks. `docs/iteration-05.md` records the money-choice game, its assumptions, and its verification. `docs/iteration-06.md` records the randomized events and investment changes. `docs/review-after-iteration-06.md` records the accuracy review, and `docs/iteration-07.md` records the resulting corrections and the new animation and art. Proposed improvements are intentionally left to Karen; no AI-generated improvement list or user-testing results have been added.
 
 ## Published first iteration
 

@@ -52,6 +52,23 @@ function portrait(who, size = 64) {
   }[who];
   return `<svg class="portrait" width="${size}" height="${size}" viewBox="0 0 64 64" aria-hidden="true" focusable="false">${art}</svg>`;
 }
+// Version 7: illustrated icons for each emergency and luck event.
+function eventIcon(id, size = 84) {
+  const ink = '#233d35', art = {
+    phone: `<rect x="22" y="6" width="36" height="62" rx="6" fill="#fffdf6" stroke="${ink}" stroke-width="3"/><path d="M30 18l10 12-6 6 12 14M44 22l-6 10 10 4" fill="none" stroke="${ink}" stroke-width="2"/><circle cx="40" cy="62" r="2.5" fill="${ink}"/>`,
+    tooth: `<path d="M22 12Q32 4 40 10Q48 4 58 12Q66 22 58 40Q54 66 48 66Q44 66 42 50Q40 44 38 50Q36 66 32 66Q26 66 22 40Q14 22 22 12Z" fill="#fffdf6" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/><path d="M8 20l6 2M10 34l6-2M64 18l8-3M66 30l7 1" stroke="#b5473a" stroke-width="3" stroke-linecap="round"/>`,
+    shoes: `<path d="M8 50V32q0-6 8-6 4 10 18 10h10q14 0 20 8l6 6v8H8z" fill="#8f4a26" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/><path d="M8 58h62" stroke="${ink}" stroke-width="3"/><path d="M34 36l4 6-4 4 4 6" fill="none" stroke="#fffdf6" stroke-width="3"/>`,
+    bonus: `<rect x="14" y="40" width="52" height="26" rx="4" fill="#eeb775" stroke="${ink}" stroke-width="3"/><rect x="22" y="22" width="36" height="20" rx="4" fill="#fffdf6" stroke="${ink}" stroke-width="3"/><path d="M40 8v14" stroke="${ink}" stroke-width="3"/><path d="M40 2q4 4 0 7-4-3 0-7z" fill="#b5473a"/><path d="M14 52h52" stroke="#fffdf6" stroke-width="3"/>`,
+    gift: `<rect x="8" y="18" width="64" height="44" rx="4" fill="#fffdf6" stroke="${ink}" stroke-width="3"/><path d="M8 20l32 24 32-24" fill="none" stroke="${ink}" stroke-width="3"/><path d="M40 52q-10-8-10-14a5 5 0 0 1 10-2 5 5 0 0 1 10 2q0 6-10 14z" fill="#b5473a"/>`,
+    refund: `<circle cx="40" cy="36" r="26" fill="#d3e38b" stroke="${ink}" stroke-width="3"/><path d="M44 16 30 40h10l-4 18 14-26H40z" fill="#eeb775" stroke="${ink}" stroke-width="2.5" stroke-linejoin="round"/>`,
+    fridge: `<rect x="18" y="4" width="44" height="66" rx="6" fill="#fffdf6" stroke="${ink}" stroke-width="3"/><path d="M18 28h44M26 12v10M26 36v14" stroke="${ink}" stroke-width="3" stroke-linecap="round"/><path d="M66 10q6 4 0 8t0 8" fill="none" stroke="#b5473a" stroke-width="2.5"/>`,
+    vet: `<path d="M18 30l4-18 10 10h16l10-10 4 18v8q0 26-22 26T18 38z" fill="#eeb775" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/><circle cx="31" cy="38" r="3" fill="${ink}"/><circle cx="49" cy="38" r="3" fill="${ink}"/><path d="M36 48q4 4 8 0M14 46h12M54 46h12" stroke="${ink}" stroke-width="2.5" fill="none"/><path d="M58 60h14M65 53v14" stroke="#b5473a" stroke-width="4"/>`,
+    bus: `<rect x="6" y="14" width="68" height="40" rx="8" fill="#d3e38b" stroke="${ink}" stroke-width="3"/><path d="M12 22h56v14H12z" fill="#bfe0e8" stroke="${ink}" stroke-width="2"/><circle cx="22" cy="58" r="6" fill="${ink}"/><circle cx="58" cy="58" r="6" fill="${ink}"/><path d="M60 4v8m-4-4h8" stroke="#b5473a" stroke-width="3"/>`,
+    glue: `<path d="M12 44l30-30 12 12-30 30z" fill="#fffdf6" stroke="${ink}" stroke-width="3"/><path d="M42 14l6-6 12 12-6 6" fill="#eeb775" stroke="${ink}" stroke-width="3"/><path d="M14 58q4 8 0 12" stroke="#bfe0e8" stroke-width="5" stroke-linecap="round"/>`
+  }[id];
+  return art ? `<svg class="event-icon" width="${size}" height="${size * 0.9}" viewBox="0 0 80 72" aria-hidden="true" focusable="false">${art}</svg>` : '';
+}
+
 function goalIcon(id, size = 72) {
   const art = {
     bike: `<circle cx="20" cy="46" r="13" fill="none" stroke="#233d35" stroke-width="4"/><circle cx="60" cy="46" r="13" fill="none" stroke="#233d35" stroke-width="4"/><path d="M20 46 34 24h20l6 22M34 24l10 22h-24M30 18h10M54 24l-4-8h8" fill="none" stroke="#a65e35" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`,
@@ -277,7 +294,7 @@ function renderPlay(animate) {
 }
 
 function turnPanel() {
-  const t = state.turn, notes = t.notes.map(n => `<div class="callout ${n.type}${n.type === 'luck' ? (n.good ? ' good' : ' bad') : ''}" role="note">${n.type === 'luck' ? `<span class="callout-tag">${n.good ? 'LUCKY BREAK' : 'SURPRISE COST'}</span>` : ''}<strong>${esc(n.title)}</strong><p>${esc(n.text)}</p></div>`).join('');
+  const t = state.turn, notes = t.notes.map(n => `<div class="callout ${n.type}${n.type === 'luck' ? (n.good ? ' good' : ' bad') : ''}" role="note">${n.type === 'luck' ? `<span class="callout-art">${eventIcon(n.id, 56)}</span>` : ''}${n.type === 'luck' ? `<span class="callout-tag">${n.good ? 'LUCKY BREAK' : 'SURPRISE COST'}</span>` : ''}<strong>${esc(n.title)}</strong><p>${esc(n.text)}</p></div>`).join('');
   return `<section class="turn" aria-labelledby="turn-title"><div class="turn-head"><h3 id="turn-title">Payday ${t.payday}: money in and out</h3><div class="turn-buttons"><button type="button" class="text-button" data-skip hidden>Skip animation</button><button type="button" class="text-button" data-replay="turn">Replay</button></div></div>${receiptHTML(t.flows, 'turn-lines')}${notes}</section>`;
 }
 
@@ -318,7 +335,7 @@ function renderStep(before, animate) {
   } else {
     const d = E.currentDecision(state);
     const chart = d.chart ? (state.pot.contributed && d.id === 'checkin' ? `<section class="pot-history" aria-label="Seed pot value by payday, fixed scale from $0 to $400">${potChart(state.pot.history, { width: 560, height: 220, labels: true, planted: state.pot.contributed })}<p class="chart-note">Monthly changes since you planted: ${esc(state.pot.moves.map(r => `${r > 0 ? '+' : ''}${r}%`).join(', ') || 'none yet')}. Fixed $0–$400 scale; the dashed line is what you put in.</p></section>` : '') + `<details class="look-closer"><summary>Look closer: what can time do to ${money(Math.max(10000, state.pot.contributed || 10000))}?</summary>${timeMachine(Math.max(10000, state.pot.contributed || 10000), 'A long-run view (hypothetical)')}</details>` : '';
-    stage.innerHTML = `${turnPanel()}<article class="card ${d.event ? 'event' : ''}" data-decision="${d.id}"><div class="speaker">${portrait(d.speaker)}<div><p class="kicker">${esc(d.kicker)}</p><p class="who">${esc(CAST[d.speaker].name)}${d.event ? ' · <span class="event-tag">Unexpected event</span>' : ''}</p></div></div>
+    stage.innerHTML = `${turnPanel()}<article class="card ${d.event ? 'event' : ''}" data-decision="${d.id}">${d.id === 'emergency' ? `<div class="event-art">${eventIcon(state.emergency, 96)}</div>` : ''}<div class="speaker">${portrait(d.speaker)}<div><p class="kicker">${esc(d.kicker)}</p><p class="who">${esc(CAST[d.speaker].name)}${d.event ? ' · <span class="event-tag">Unexpected event</span>' : ''}</p></div></div>
      <h2>${esc(d.title)}</h2><p class="lead">${esc(d.text)}</p><p class="aside"><em>${esc(d.aside)}</em></p>${chart}
      <ul class="options" aria-label="Your choices">${d.options.map(optionHTML).join('')}</ul>
      <p class="concepts" aria-label="Ideas in this decision">${d.concepts.map(c => `<span>${esc(E.CONCEPTS[c])}</span>`).join('')}</p></article>`;
@@ -401,6 +418,8 @@ function renderRecap() {
   app.innerHTML = `${header()}<section class="recap"><p class="eyebrow">YOUR TEN PAYDAYS · RECAP</p><h2>Your year in Pocketford, in more than one number.</h2>
    <p class="lead">There is no high score. A bigger balance is one good outcome; so are a calm cushion, low debt, and good times you planned for. Here is how your choices, and your luck, added up.</p>
    ${postcard(sum)}
+   <div class="cast-wave" aria-label="The Pocketford crew says goodbye">${[['moxie', 'Same time next year? I’ll bring snacks.'], ['shelby', 'Slow, steady, and still going. Well played.'], ['juno', 'Whatever you chose, you chose it on purpose. Ride on.']].map(([w, line]) => `<figure>${portrait(w, 64)}<figcaption><strong>${CAST[w].name}</strong> ${esc(line)}</figcaption></figure>`).join('')}</div>
+   ${['bought', 'smaller', 'borrowed'].includes(sum.goal.outcome) ? `<div class="confetti" aria-hidden="true">${Array.from({ length: 24 }, (_, i) => `<i style="left:${(i * 37) % 100}%;animation-delay:${(i % 8) * 0.18}s;background:${['#eeb775', '#d3e38b', '#bfe0e8', '#b5473a'][i % 4]}"></i>`).join('')}</div>` : ''}
    <div class="measures">
     <article class="measure"><h3>Your goal</h3><p class="big">${sum.goal.outcome === 'waiting' ? `${Math.round(sum.goal.progress * 100)}%` : '✓'}</p><p>${esc(outcomeText)}</p><div class="bar" aria-hidden="true"><span style="width:${Math.round(sum.goal.progress * 100)}%"></span></div><p class="scale">Scale: $0 to ${money(goal.cost)}</p></article>
     <article class="measure"><h3>Breathing room</h3><p class="big">${money(sum.cushion.amount)}</p><p>In your jar and wallet: about <strong>${months.toFixed(1)} ${months.toFixed(1) === '1.0' ? 'month' : 'months'}</strong> of needs (${money(sum.cushion.needs)} a month). This is what absorbs the next surprise.</p></article>
